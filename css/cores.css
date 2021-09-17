@@ -1,0 +1,11 @@
+:root{
+    /*Tons de Cinza*/
+    --cor-cinza-um : #303030;
+    --cor-cinza-dois : #535353;
+    --cor-cinza-tres : #474747;
+
+    /*Cores Primarias*/
+    --cor-primaria : #F7BA00;
+    --cor-secundaria : #ffdd59;
+    --cor-tercearia : #D5DDEC;
+}

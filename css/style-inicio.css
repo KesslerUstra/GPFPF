@@ -1,0 +1,136 @@
+/*----------------Classes----------------*/
+
+.text-align-center{
+    text-align: center;
+}
+
+/*----------------Layout da Página----------------*/
+
+body{
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+    height: 100vh;
+    background-color: var(--cor-cinza-um);
+}
+.layout-principal{
+    margin: auto;
+    width: 100%;
+}
+
+/*----------------Titulos----------------*/
+
+.conteudo{
+    max-width: 1020px;
+    margin: auto;
+}
+
+.titulo h1{
+    z-index: 10;
+    letter-spacing: 3px;
+    font-size: 48px;
+    color: var(--cor-primaria);
+    margin-bottom: 30px;
+}
+
+.subtitulo h2{ 
+    z-index: 10;
+    letter-spacing: 3px;
+    margin-top: 30px;
+    font-size: 24px;
+    color: var(--cor-primaria);
+}
+
+/*----------------Menu----------------*/
+
+.menu{
+    z-index: 10;
+    background-color: var(--cor-cinza-dois);
+    padding: 50px 0px;
+}
+
+.menu-conteudo ul{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    flex-flow: row wrap;
+}
+
+.menu-conteudo ul li{
+    display: block;
+}
+
+.menu-conteudo ul li a{
+    display: block;
+    padding: 8px 10px;
+    font-size: 25px;
+    color: var(--cor-secundaria);
+    border: 3px solid var(--cor-secundaria);
+    border-radius: 20px;
+    box-shadow: 3px 3px 4px var(--cor-cinza-tres), -1px -1px 2px var(--cor-cinza-tres);
+    transition: all 0.2s;
+}
+
+.menu-conteudo ul li a:hover{
+    transform: scale(1.05);
+}
+
+/*----------------Animação----------------*/
+
+.grupo-atomos{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -40px;
+
+}
+
+.atomos{
+    z-index: -5;
+    background-color: var(--cor-tercearia);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    filter: blur(8px);
+    animation: atomo 7s linear infinite;
+}
+
+.atomos:nth-child(1){
+    animation-delay: 2s;
+}
+.atomos:nth-child(2){
+    animation-delay: 0.5s;
+}
+.atomos:nth-child(3){
+    animation-delay: 4s;
+}
+.atomos:nth-child(4){
+    animation-delay: 6s;
+}
+.atomos:nth-child(5){
+    animation-delay: 10s;
+}
+.atomos:nth-child(6){
+    animation-delay: 3s;
+}
+
+
+@keyframes atomo{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10%{
+        opacity: 0;
+    }
+    70%{
+        filter: blur(10px);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-90vh);
+        opacity: 0;
+    }
+}
