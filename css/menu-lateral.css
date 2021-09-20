@@ -1,0 +1,102 @@
+/*----------------Menu----------------*/
+
+.menu-icone{
+    top: 20px;
+    left: 1%;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    box-shadow: inset 2px 2px 2px var(--cor-cinza-tres), inset -2px -2px 2px var(--cor-cinza-tres);
+    transition: all 0.3s;
+    background-color: var(--cor-cinza-quatro);
+}
+
+.menu-icone:hover{
+    background-color: var(--cor-cinza-tres);
+}
+
+.menu-icone .icone{
+    height: 2px;
+    width: 16px;
+    background-color: #fff;
+    position: relative;
+}
+
+.menu-icone .icone:before, .menu-icone .icone:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.menu-icone .icone:before{
+    top: -6px;
+}
+
+.menu-icone .icone:after{
+    top: 6px;
+}
+
+.invisivel{
+    transform: translatex(-101%);
+    opacity: 0;
+}
+
+.menu{
+    z-index: 100;
+    transition: all 0.2s cubic-bezier(.14,.48,0,.98);
+    position: fixed;
+    height: 100%;
+    padding: 0px 20px;
+    background-color: var(--cor-cinza-cinco);
+}
+
+.menu ul {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu .exit-menu{
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    font-size: 25px;
+    left: 10px;
+}
+
+.menu .exit-menu:hover{
+    color: red;
+}
+
+.menu ul li{
+    margin-bottom: 10px;
+}
+
+.menu ul li a{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: var(--cor-cinza-um);
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px var(--cor-cinza-seis), -2px -2px 3px var(--cor-cinza-seis);
+}
+
+.menu ul li a:hover{
+    box-shadow: inset 2px 2px 3px var(--cor-cinza-seis), inset -2px -2px 3px var(--cor-cinza-seis);
+    
+}
+
+.menu ul li:last-child{
+    margin-bottom: 0px;
+}

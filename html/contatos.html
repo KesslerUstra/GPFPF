@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/cores.css">
+    <link rel="stylesheet" href="../css/style-sobre.css">
+</head>
+<body>
+    <div class="menu-icone">
+        <div class="icone"></div>
+    </div>
+    <div class="menu invisivel">
+        <div class="exit-menu">&times;</div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li><a href="participantes.html">Participantes</a></li>
+        </ul>
+    </div>
+    <div class="layout">
+        <div class="titulo">
+            <h1>Contatos</h1>
+        </div>
+        <div class="conteudo">
+            <form action="https://formsubmit.co/your@email.com" method="POST">
+                <div class="formulario nome">
+                    <label for="name">Nome :</label>
+                    <input type="text" name="name" id="name" required>
+                </div>
+                <div class="formulario email">
+                    <label for="email">Email :</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+                <div class="formularios conteudo">
+                    <label for="texto">Texto :</label>
+                    <textarea name="message" id="texto" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+           </form>
+        </div>
+    </div>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

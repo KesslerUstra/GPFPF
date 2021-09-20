@@ -1,0 +1,155 @@
+/*----------------Classes----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+/*----------------Layout da Página----------------*/
+
+body{
+    font-family: 'Oxygen', sans-serif;
+    display: grid;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-cinza-um);
+}
+
+.layout{
+    position: relative;
+    margin: 0px auto;
+    max-width: 800px;
+    height: 100%;
+    background-color: var(--cor-cinza-dois);
+    padding: 0px 100px;
+}
+
+/*----------------Menu----------------*/
+
+.menu-icone{
+    top: 5px;
+    left: 1%;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 1px var(--cor-cinza-tres), inset -1px -1px 1px var(--cor-cinza-tres);
+    transition: all 0.3s;
+}
+
+.menu-icone:hover{
+    background-color: var(--cor-cinza-tres);
+}
+
+.menu-icone .icone{
+    height: 2px;
+    width: 16px;
+    background-color: #fff;
+    position: relative;
+}
+
+.menu-icone .icone:before, .menu-icone .icone:after{
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.menu-icone .icone:before{
+    top: -6px;
+}
+
+.menu-icone .icone:after{
+    top: 6px;
+}
+
+.invisivel{
+    transform: translatex(-101%);
+    opacity: 0;
+}
+
+.menu{
+    z-index: 100;
+    transition: all 0.2s cubic-bezier(.14,.48,0,.98);
+    position: fixed;
+    height: 100%;
+    padding: 0px 20px;
+    background-color: var(--cor-cinza-cinco);
+}
+
+.menu ul {
+    margin-top: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu .exit-menu{
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    font-size: 25px;
+    left: 10px;
+}
+
+.menu .exit-menu:hover{
+    color: red;
+}
+
+.menu ul li{
+    margin-bottom: 10px;
+}
+
+.menu ul li a{
+    text-align: center;
+    display: block;
+    padding: 10px;
+    color: var(--cor-cinza-um);
+    border-radius: 20px;
+    box-shadow: 2px 2px 3px var(--cor-cinza-seis), -2px -2px 3px var(--cor-cinza-seis);
+}
+
+.menu ul li a:hover{
+    box-shadow: inset 2px 2px 3px var(--cor-cinza-seis), inset -2px -2px 3px var(--cor-cinza-seis);
+    
+}
+
+.menu ul li:last-child{
+    margin-bottom: 0px;
+}
+
+/*----------------Titulo----------------*/
+
+.titulo{
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    width: 100%;
+    margin: 20px auto;
+    padding: 20px 0px;
+    text-align: center;
+    background-color: var(--cor-cinza-dois);
+    border-bottom: 2px solid var(--cor-cinza-um);
+}
+
+/*----------------Conteudo Geral----------------*/
+
+.conteudo{
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+}
+
+.conteudo h2{
+    margin-bottom: 20px;
+}
+
+.conteudo p{
+    margin-bottom: 20px;
+}
+
+/*----------------Formulario----------------*/

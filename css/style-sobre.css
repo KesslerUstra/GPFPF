@@ -1,4 +1,4 @@
-/*----------------Classes----------------*/
+/*----------------Importações----------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
 
@@ -6,121 +6,9 @@
 
 body{
     font-family: 'Oxygen', sans-serif;
-    display: grid;
     width: 100%;
     min-height: 100vh;
-    background-color: var(--cor-cinza-um);
-}
-
-.layout{
-    position: relative;
-    margin: 0px auto;
-    max-width: 800px;
-    height: 100%;
-    background-color: var(--cor-cinza-dois);
-    padding: 0px 100px;
-}
-
-/*----------------Menu----------------*/
-
-.menu-icone{
-    top: 5px;
-    left: 1%;
-    display: flex;
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    cursor: pointer;
-    user-select: none;
-    border-radius: 50%;
-    box-shadow: inset 1px 1px 1px var(--cor-cinza-tres), inset -1px -1px 1px var(--cor-cinza-tres);
-    transition: all 0.3s;
-}
-
-.menu-icone:hover{
-    background-color: var(--cor-cinza-tres);
-}
-
-.menu-icone .icone{
-    height: 2px;
-    width: 16px;
-    background-color: #fff;
-    position: relative;
-}
-
-.menu-icone .icone:before, .menu-icone .icone:after{
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #fff;
-}
-
-.menu-icone .icone:before{
-    top: -6px;
-}
-
-.menu-icone .icone:after{
-    top: 6px;
-}
-
-.invisivel{
-    transform: translatex(-101%);
-    opacity: 0;
-}
-
-.menu{
-    z-index: 100;
-    transition: all 0.2s cubic-bezier(.14,.48,0,.98);
-    position: fixed;
-    height: 100%;
-    padding: 0px 20px;
-    background-color: var(--cor-cinza-cinco);
-}
-
-.menu ul {
-    margin-top: 35px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.menu .exit-menu{
-    cursor: pointer;
-    user-select: none;
-    position: absolute;
-    font-size: 25px;
-    left: 10px;
-}
-
-.menu .exit-menu:hover{
-    color: red;
-}
-
-.menu ul li{
-    margin-bottom: 10px;
-}
-
-.menu ul li a{
-    text-align: center;
-    display: block;
-    padding: 10px;
-    color: var(--cor-cinza-um);
-    border-radius: 20px;
-    box-shadow: 2px 2px 3px var(--cor-cinza-seis), -2px -2px 3px var(--cor-cinza-seis);
-}
-
-.menu ul li a:hover{
-    box-shadow: inset 2px 2px 3px var(--cor-cinza-seis), inset -2px -2px 3px var(--cor-cinza-seis);
-    
-}
-
-.menu ul li:last-child{
-    margin-bottom: 0px;
+    background-color: var(--cor-cinza-sete);
 }
 
 /*----------------Titulo----------------*/
@@ -128,38 +16,52 @@ body{
 .titulo{
     text-transform: uppercase;
     color: var(--cor-primaria);
-    width: 100%;
-    margin: 20px auto;
-    padding: 20px 0px;
     text-align: center;
-    background-color: var(--cor-cinza-dois);
-    border-bottom: 2px solid var(--cor-cinza-um);
+    background-color: var(--cor-cinza-um);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
 }
 
 /*----------------Conteudo Geral----------------*/
 
-.conteudo{
+.conteudo-geral{
     text-align: center;
-    max-width: 400px;
+    max-width: 600px;
     margin: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
 }
 
-.conteudo h2{
+.conteudo-geral h2{
+    color: var(--cor-cinza-um);
+    padding: 20px 0px;
     margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-cinza-quatro);
 }
 
-.conteudo p{
+.conteudo-geral p{
+    color: var(--cor-cinza-um);
     margin-bottom: 20px;
+    font-size: 20px;
+    text-align: justify;
+    padding: 0px 10px;
 }
 
-/*----------------Card----------------*/
+/*----------------Card Conteudo Geral----------------*/
 .card{
     display: flex;
     position: relative;
-    width: 210px;
-    height: 210px;
+    width: 250px;
+    height: 250px;
     transform-style: preserve-3d;
-    transition:  all 0.5s;
+    transition:  ease-in-out 0.4s;
     margin: auto;
 }
 
@@ -167,7 +69,7 @@ body{
     cursor: pointer;
     box-shadow: inset 1px 1px 1px var(--cor-cinza-tres), inset -1px -1px 1px var(--cor-cinza-tres);
     position: absolute;
-    border: 5px solid var(--cor-cinza-um);
+    border: 2px solid var(--cor-cinza-um);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -175,7 +77,7 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .imagem img{
@@ -187,10 +89,83 @@ body{
     background-color: var(--cor-cinza-quatro);
     transform: rotateY(180deg);
     pointer-events: none;
-    color : var(--cor-tercearia);
-    font-size: 20px;
+    color : var(--cor-cinza-sete);
+    font-size: 23px;
 }
 
 .flip{
     transform: rotateY(180deg);
+}
+
+/*----------------Conteudo Especifico----------------*/
+
+.fundo-conteudo-tabela{
+    min-height: 80vh;
+    width: 100%;
+    background-color: var(--cor-cinza-tres);
+}
+
+.conteudo-tabela{
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.conteudo-tabela h2{
+    color: var(--cor-cinza-sete);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-cinza-sete);
+}
+
+.conteudo-tabela .identificacao {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.conteudo-tabela .identificacao  h4,.conteudo-tabela .identificacao  p{
+    color: #fff;
+}
+
+.conteudo-tabela .identificacao  h4{
+    font-size: 22px;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #fff;
+}
+
+.conteudo-tabela .identificacao  p{
+    font-size: 18px;
+}
+
+.conteudo-tabela .link-Lattes{
+    margin-top: 100px;
+}
+
+.conteudo-tabela .link-Lattes .links{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-tabela .link-Lattes a{
+    color: #fff;
+    padding: 20px;
+    display: block;
+    width: 30%;
+    font-size: min(5vw,20px);
+    border: 3px solid #fff;
 }
