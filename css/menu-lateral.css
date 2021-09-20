@@ -9,13 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    position: fixed;
+    position: absolute;
     cursor: pointer;
     user-select: none;
     border-radius: 50%;
-    box-shadow: inset 2px 2px 2px var(--cor-cinza-tres), inset -2px -2px 2px var(--cor-cinza-tres);
     transition: all 0.3s;
-    background-color: var(--cor-cinza-quatro);
+    background-color: var(--cor-cinza-um);
 }
 
 .menu-icone:hover{
@@ -57,7 +56,7 @@
     position: fixed;
     height: 100%;
     padding: 0px 20px;
-    background-color: var(--cor-cinza-cinco);
+    background-color: var(--cor-cinza-um);
 }
 
 .menu ul {
@@ -73,6 +72,7 @@
     position: absolute;
     font-size: 25px;
     left: 10px;
+    color: #fff;
 }
 
 .menu .exit-menu:hover{
@@ -87,16 +87,22 @@
     text-align: center;
     display: block;
     padding: 10px;
-    color: var(--cor-cinza-um);
+    color: var(--cor-cinza-sete);
     border-radius: 20px;
-    box-shadow: 2px 2px 3px var(--cor-cinza-seis), -2px -2px 3px var(--cor-cinza-seis);
+    box-shadow: 2px 2px 3px var(--cor-cinza-um-sombra), -2px -2px 3px var(--cor-cinza-um-sombra);
 }
 
 .menu ul li a:hover{
-    box-shadow: inset 2px 2px 3px var(--cor-cinza-seis), inset -2px -2px 3px var(--cor-cinza-seis);
+    box-shadow: inset 2px 2px 3px var(--cor-cinza-tres), inset -2px -2px 3px var(--cor-cinza-tres);
     
 }
 
 .menu ul li:last-child{
     margin-bottom: 0px;
+}
+
+.menu-ativo{
+    color: var(--cor-primaria) !important;
+    box-shadow: 2px 2px 3px var(--cor-primaria), -2px -2px 3px var(--cor-primaria) !important;
+    pointer-events: none;
 }
