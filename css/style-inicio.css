@@ -1,5 +1,9 @@
 /*----------------Classes----------------*/
 
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+/*----------------Classes----------------*/
+
 .text-align-center{
     text-align: center;
 }
@@ -7,6 +11,7 @@
 /*----------------Layout da Página----------------*/
 
 body{
+    font-family: 'Oxygen', sans-serif;
     display: flex;
     width: 100vw;
     overflow: hidden;
@@ -27,7 +32,7 @@ body{
 
 .titulo h1{
     z-index: 10;
-    letter-spacing: 3px;
+    letter-spacing: 8px;
     font-size: 48px;
     color: var(--cor-primaria);
     margin-bottom: 30px;
@@ -35,7 +40,7 @@ body{
 
 .subtitulo h2{ 
     z-index: 10;
-    letter-spacing: 3px;
+    letter-spacing: 4px;
     margin-top: 30px;
     font-size: 24px;
     color: var(--cor-primaria);
@@ -68,7 +73,8 @@ body{
     border: 3px solid var(--cor-secundaria);
     border-radius: 20px;
     box-shadow: 3px 3px 4px var(--cor-cinza-tres), -1px -1px 2px var(--cor-cinza-tres);
-    transition: all 0.2s;
+    transition: all 0.2s cubic-bezier(.17,.67,1,2);
+    text-transform: capitalize;
 }
 
 .menu-conteudo ul li a:hover{
@@ -83,7 +89,7 @@ body{
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    bottom: -40px;
+    bottom: -46px;
 
 }
 
@@ -94,25 +100,31 @@ body{
     height: 35px;
     border-radius: 50%;
     filter: blur(8px);
-    animation: atomo 7s linear infinite;
+    animation: atomo 5s linear infinite;
 }
 
 .atomos:nth-child(1){
     animation-delay: 2s;
 }
 .atomos:nth-child(2){
+    width: 45px;
+    height: 45px;
     animation-delay: 0.5s;
 }
 .atomos:nth-child(3){
     animation-delay: 4s;
 }
 .atomos:nth-child(4){
+    width: 10px;
+    height: 10px;
     animation-delay: 6s;
 }
 .atomos:nth-child(5){
     animation-delay: 10s;
 }
 .atomos:nth-child(6){
+    width: 28px;
+    height: 28px;
     animation-delay: 3s;
 }
 
@@ -126,7 +138,6 @@ body{
         opacity: 0;
     }
     70%{
-        filter: blur(10px);
         opacity: 1;
     }
     100%{
