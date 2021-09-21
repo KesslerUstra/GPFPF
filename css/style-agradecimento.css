@@ -1,0 +1,56 @@
+/*----------------Importações----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+/*----------------Layout da Página----------------*/
+
+body{
+    font-family: 'Oxygen', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-cinza-sete);
+}
+
+/*----------------Conteudo Geral----------------*/
+
+.agradecimento{
+    text-align: center;
+    max-width: 400px;
+    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 30px;
+    align-items: center;
+}
+
+.agradecimento h1{
+    width: 80%;
+    color: var(--cor-cinza-um);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    font-size: 40px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-cinza-quatro);
+}
+
+.agradecimento h2{
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: var(--cor-cinza-um);
+}
+
+.agradecimento a{
+    color: var(--cor-cinza-um);
+    margin: 12px;
+    width: max(40%,100px);
+    padding: 20px;
+    border: 2px solid var(--cor-cinza-quatro);
+    transition: background-color linear 0.2s, color linear 0.15s;
+}
+
+.agradecimento a:hover{
+    background-color: var(--cor-cinza-um);
+    color: var(--cor-cinza-sete);
+}
