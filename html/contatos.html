@@ -7,7 +7,8 @@
     <title>Contatos</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/cores.css">
-    <link rel="stylesheet" href="../css/style-sobre.css">
+    <link rel="stylesheet" href="../css/menu-lateral.css">
+    <link rel="stylesheet" href="../css/style-contato.css">
 </head>
 <body>
     <div class="menu-icone">
@@ -20,24 +21,43 @@
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="eventos.html">Eventos</a></li>
             <li><a href="participantes.html">Participantes</a></li>
+            <li><a href="#" class="menu-ativo">Contatos</a></li>
         </ul>
     </div>
-    <div class="layout">
-        <div class="titulo">
-            <h1>Contatos</h1>
+    <div class="titulo">
+        <h1>Contatos</h1>
+    </div>
+    <div class="conteudo">
+        <h2>Meios de Comunicação</h2>
+        <div class="dados-comunicacao">
+            <div>
+                <h4>Telefone</h4>
+                <p>(34) 3261-3213</p>
+            </div>
+            <div>
+                <h4>Fax</h4>
+                <p>(34) 3271-5228</p>
+            </div>
+            <div>
+                <h4>Email</h4>
+                <p>srvustra@pontal.ufu.br</p>
+            </div>
         </div>
-        <div class="conteudo">
+    </div>
+    <div class="fundo-formulario">
+        <div class="formulario">
+            <h2>Formulário</h2>
             <form action="https://formsubmit.co/your@email.com" method="POST">
-                <div class="formulario nome">
-                    <label for="name">Nome :</label>
+                <div class="formularios-partes">
+                    <label for="name">Nome</label>
                     <input type="text" name="name" id="name" required>
                 </div>
-                <div class="formulario email">
-                    <label for="email">Email :</label>
+                <div class="formularios-partes">
+                    <label for="email">Email</label>
                     <input type="email" name="email" id="email" required>
                 </div>
-                <div class="formularios conteudo">
-                    <label for="texto">Texto :</label>
+                <div class="formularios-partes">
+                    <label for="texto">Texto</label>
                     <textarea name="message" id="texto" required></textarea>
                 </div>
                 <button type="submit">Send</button>

@@ -89,11 +89,11 @@
     padding: 10px;
     color: var(--cor-cinza-sete);
     border-radius: 20px;
-    box-shadow: 2px 2px 3px var(--cor-cinza-um-sombra), -2px -2px 3px var(--cor-cinza-um-sombra);
+    box-shadow: 1px 1px 5px var(--cor-cinza-um-sombra), -1px -1px 5px var(--cor-cinza-um-sombra);
 }
 
 .menu ul li a:hover{
-    box-shadow: inset 2px 2px 3px var(--cor-cinza-tres), inset -2px -2px 3px var(--cor-cinza-tres);
+    box-shadow: inset 1px 1px 2px var(--cor-cinza-tres), inset -1px -1px 2px var(--cor-cinza-tres);
     
 }
 
@@ -103,6 +103,6 @@
 
 .menu-ativo{
     color: var(--cor-primaria) !important;
-    box-shadow: 2px 2px 3px var(--cor-primaria), -2px -2px 3px var(--cor-primaria) !important;
+    box-shadow: 1px 1px 5px var(--cor-primaria), -1px -1px 5px var(--cor-primaria) !important;
     pointer-events: none;
 }
