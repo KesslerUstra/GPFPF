@@ -1,0 +1,27 @@
+/*----------------Importações----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+
+/*----------------Layout da Página----------------*/
+
+body{
+    font-family: 'Oxygen', sans-serif;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-cinza-sete);
+}
+
+/*----------------Titulo----------------*/
+
+.titulo{
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    text-align: center;
+    background-color: var(--cor-cinza-um);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+/*----------------Conteudo Geral----------------*/

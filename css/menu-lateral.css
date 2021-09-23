@@ -60,7 +60,7 @@
 }
 
 .menu ul {
-    margin-top: 35px;
+    margin-top: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -70,9 +70,10 @@
     cursor: pointer;
     user-select: none;
     position: absolute;
-    font-size: 25px;
+    font-size: 26px;
     left: 10px;
     color: #fff;
+    transition: all 0.1s linear;
 }
 
 .menu .exit-menu:hover{
@@ -80,20 +81,31 @@
 }
 
 .menu ul li{
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .menu ul li a{
     text-align: center;
     display: block;
     padding: 10px;
+    position: relative;
     color: var(--cor-cinza-sete);
-    border-radius: 20px;
-    box-shadow: 1px 1px 5px var(--cor-cinza-um-sombra), -1px -1px 5px var(--cor-cinza-um-sombra);
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px var(--cor-cinza-um-sombra), -1px -1px 4px var(--cor-cinza-um-sombra);
+    border: 1px solid var(--cor-cinza-sete);
+    transition: color 0.12s ease-in-out, border-color 0.12s ease-in-out;
+    transition: opacity .3s linear,transform .2s ease-out;
+}
+
+.invisivel-topico{
+    opacity: 0;
+    transform: translateY(-100px);
 }
 
 .menu ul li a:hover{
-    box-shadow: inset 1px 1px 2px var(--cor-cinza-tres), inset -1px -1px 2px var(--cor-cinza-tres);
+    color: var(--cor-quintenaria);
+    border-color: var(--cor-quintenaria) !important;
+    box-shadow: inset 2px 2px 3px var(--cor-cinza-tres), inset -2px -2px 3px var(--cor-cinza-tres);
     
 }
 
@@ -103,6 +115,6 @@
 
 .menu-ativo{
     color: var(--cor-primaria) !important;
-    box-shadow: 1px 1px 5px var(--cor-primaria), -1px -1px 5px var(--cor-primaria) !important;
+    box-shadow: inset 2px 2px 3px var(--cor-cinza-tres), inset -2px -2px 3px var(--cor-cinza-tres) !important;
     pointer-events: none;
 }
