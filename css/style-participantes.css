@@ -24,4 +24,108 @@ body{
     padding: 20px 0px;
 }
 
-/*----------------Conteudo Geral----------------*/
+/*----------------Pesquisadores----------------*/
+
+.pesquisadores{
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.pesquisadores h2{
+    color: var(--cor-cinza-um);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-cinza-quatro);
+}
+
+/*----------------Slider Pesquisadores----------------*/
+
+.pesquisadores .slider{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    height: 300px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.pesquisadores .slider .slides{
+    background-color: var(--cor-cinza-um);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(300px);
+    transition: all 0.8s cubic-bezier(.5,.01,.43,1);
+}
+
+.pesquisadores .slider .slides img{
+    object-fit: cover;
+    margin: 10px 0px;
+    border-radius: 10px;
+}
+
+.slide-proximo{
+    transform: translateX(-330px) !important;
+}
+
+.slide-visivel{
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+.pesquisadores .buttons{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+}
+
+.pesquisadores .buttons .button{
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    border: 2px solid var(--cor-quintenaria);
+    transition: all 0.3s linear;
+}
+
+.button-ativo{
+    background-color: var(--cor-quintenaria);
+}
+
+/*----------------Estudantes----------------*/
+
+.fundo-estudantes{
+    min-height: 80vh;
+    width: 100%;
+    background-color: var(--cor-cinza-tres);
+}
+
+.estudantes{
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

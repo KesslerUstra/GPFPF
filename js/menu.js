@@ -36,9 +36,7 @@ function aparecer(element){
 function fecharMenu(){
     menu.classList.add('invisivel');
     funcaoTempo = false;
-    topicos.forEach(element => {
-        element.classList.add('invisivel-topico')
-    });
+    setTimeout(desaparecer,0)
     setTimeout(desaparecer,300)
 }
 
