@@ -1,0 +1,271 @@
+/*----------------Layout da Página----------------*/
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--cor-cinza-sete);
+}
+
+/*----------------Titulo----------------*/
+
+.titulo{
+    text-transform: uppercase;
+    color: var(--cor-primaria);
+    text-align: center;
+    background-color: var(--cor-cinza-um);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0px;
+}
+
+/*----------------Pesquisadores----------------*/
+
+.pesquisadores{
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-bottom: 30px;
+}
+
+.pesquisadores h2, .estudantes h2{
+    color: var(--cor-cinza-um);
+    padding: 20px 0px;
+    margin-bottom: 20px;
+    font-size: 30px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid var(--cor-cinza-quatro);
+}
+
+/*----------------Slider Pesquisadores----------------*/
+
+.layout-slider-pesquisadores, .layout-slider-estudantes{
+    display: flex;
+    margin: auto auto;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.slider-pesquisadores, .slider-estudantes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    min-height: 400px;
+    margin: 10px auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-left-pesquisadores, .button-right-pesquisadores, .button-left-estudantes, .button-right-estudantes{
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 12px;
+    cursor: pointer;
+    border: 2px solid rgba(0, 0, 0, 0.048);
+    border-radius: 10px;
+    color: var(--cor-cinza-quatro);
+    user-select: none;
+
+}
+
+.button-left-pesquisadores:hover, .button-right-pesquisadores:hover{
+    background-color: var(--cor-cinza-cinco);
+}
+
+.button-pause{
+    pointer-events: none;
+}
+
+.slides-pesquisadores, .slides-estudantes{
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    min-height: 400px;
+    transform: translateX(300px);
+    transition: all 0.4s linear;
+}
+
+.slides-pesquisadores img, .slides-estudantes img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 10px 0px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px var(--cor-cinza-quatro), -1px -1px 3px var(--cor-cinza-quatro);
+}
+
+.slides-pesquisadores h4, .slides-estudantes h4{
+    color: var(--cor-cinza-um);
+    max-height: 100px;
+    overflow: hidden;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    padding: 0px 10px;
+}
+
+.slides-pesquisadores a, .slides-estudantes a{
+    margin-top: 10px;
+    padding: 10px;
+    border: 2px solid var(--cor-cinza-quatro);
+    color: var(--cor-cinza-quatro);
+    position: relative;
+    transition: 0.15s cubic-bezier(.17,.67,1,2);
+
+}
+
+.slides-pesquisadores a span, .slides-estudantes a span{
+    z-index: 10;
+    position: relative;
+}
+
+.slides-pesquisadores a::before, .slides-estudantes a::before{
+    content: '';
+    top: 6px;
+    left: -3px;
+    width: calc(100% + 6px);
+    height: calc(100% - 12px);
+    background-color: var(--cor-cinza-sete);
+    position: absolute;
+    transform: scaleX(1);
+    transition: 0.3s ease-in-out 0.3s;
+}
+
+.slides-pesquisadores a:hover:before, .slides-estudantes a:hover::before{
+    transform: scaleY(0);
+}
+
+.slides-pesquisadores a::after, .slides-estudantes a::after{
+    content: '';
+    left: 6px;
+    top: -3px;
+    height: calc(100% + 6px);
+    width: calc(100% - 12px);
+    background-color: var(--cor-cinza-sete);
+    position: absolute;
+    transform: scaleX(1);
+    transition: 0.3s ease-in-out;
+}
+
+.slides-pesquisadores a:hover::after, .slides-estudantes a:hover::after{
+    transform: scaleX(0);
+}
+
+.slide-anterior{
+    transform: translateX(-330px) !important;
+}
+
+.slide-visivel{
+    transform: translateX(0px) !important;
+    opacity: 1 !important;
+}
+
+.slide-proximo{
+    transform: translateX(330px) !important;
+}
+
+.buttons-pesquisadores, .buttons-estudantes{
+    margin-top: 10px;
+    display: flex;
+    margin: 70px auto;
+    flex-direction: row;
+    gap: 10px;
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.button-pesquisadores, .button-estudantes{
+    width: 10px;
+    border-radius: 50%;
+    height: 10px;
+    border: 2px solid var(--cor-quintenaria);
+    transition: all 0.3s linear;
+}
+
+.button-ativo{
+    background-color: var(--cor-quintenaria);
+}
+
+/*----------------Estudantes----------------*/
+
+.fundo-estudantes{
+    min-height: 80vh;
+    width: 100%;
+    background-color: var(--cor-cinza-tres);
+}
+
+.estudantes{
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.estudantes h2{
+    color: var(--cor-cinza-sete) !important;
+    border-bottom: 2px solid var(--cor-cinza-sete) !important;
+}
+
+.button-left-estudantes, .button-right-estudantes{
+    border: 2px solid rgba(255, 255, 255, 0.048) !important;
+    border-radius: 10px !important;
+    color: var(--cor-cinza-sete) !important;
+}
+
+.button-left-estudantes:hover, .button-right-estudantes:hover{
+    background-color: var(--cor-cinza-dois) !important;
+}
+
+.slides-estudantes h4{
+    color: var(--cor-cinza-sete);
+}
+
+.slides-estudantes a{
+    border-color: var(--cor-cinza-sete);
+    color: var(--cor-cinza-sete);
+}
+
+.slides-estudantes a::before{
+    background-color: var(--cor-cinza-tres);
+}
+
+.slides-estudantes a::after{
+    background-color: var(--cor-cinza-tres);
+}
+
+/*----------------Medias----------------*/
+
+@media only screen and (min-width: 430px) {
+    .layout-slider-pesquisadores, .layout-slider-estudantes{
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .layout-slider-pesquisadores, .layout-slider-estudantes{
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .buttons-pesquisadores, .buttons-estudantes{
+        width: 100%;
+        gap: 5px;
+    }
+}

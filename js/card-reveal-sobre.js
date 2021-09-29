@@ -21,7 +21,7 @@ function mouseEnterCard(){
 }
 
 function mouseOutCard(){
-    funcao = setInterval(rodarCard,5000);
+    funcao = setInterval(rodarCard,4000);
 }
 
 function clickCard(){

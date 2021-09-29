@@ -1,11 +1,6 @@
-/*----------------Importações----------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
-
 /*----------------Layout da Página----------------*/
 
 body{
-    font-family: 'Oxygen', sans-serif;
     width: 100%;
     min-height: 100vh;
     background-color: var(--cor-cinza-sete);
@@ -16,7 +11,6 @@ body{
 .titulo{
     text-transform: uppercase;
     color: var(--cor-primaria);
-    text-align: center;
     background-color: var(--cor-cinza-um);
     display: flex;
     align-items: center;
@@ -61,15 +55,15 @@ body{
     width: 250px;
     height: 250px;
     transform-style: preserve-3d;
-    transition:  ease-in-out 0.4s;
+    transition:  ease-in-out 0.6s;
     margin: auto;
 }
 
 .face{
     cursor: pointer;
-    box-shadow: inset 1px 1px 1px var(--cor-cinza-tres), inset -1px -1px 1px var(--cor-cinza-tres);
+    box-shadow: 2px 2px 4px var(--cor-cinza-cinco), inset -1px -1px 1px var(--cor-cinza-tres);
     position: absolute;
-    border: 2px solid var(--cor-cinza-um);
+    border: 3px solid var(--cor-cinza-um);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -86,10 +80,10 @@ body{
 }
 
 .texto{
-    background-color: var(--cor-cinza-quatro);
+    background-color: var(--cor-cinza-cinco);
     transform: rotateY(180deg);
     pointer-events: none;
-    color : var(--cor-cinza-sete);
+    color : var(--cor-cinza-um);
     font-size: 23px;
 }
 
@@ -107,7 +101,7 @@ body{
 
 .conteudo-tabela{
     text-align: center;
-    max-width: 600px;
+    max-width: 550px;
     margin: auto;
     min-height: 80vh;
     display: flex;
@@ -150,7 +144,11 @@ body{
 }
 
 .conteudo-tabela .link-Lattes{
-    margin-top: 100px;
+    margin-top: 70px;
+}
+
+.conteudo-tabela .link-Lattes h2{
+    margin-bottom: 40px;
 }
 
 .conteudo-tabela .link-Lattes .links{

@@ -89,12 +89,11 @@
     display: block;
     padding: 10px;
     position: relative;
-    color: var(--cor-cinza-sete);
+    color: var(--cor-cinza-cinco);
     border-radius: 10px;
     box-shadow: 1px 1px 4px var(--cor-cinza-um-sombra), -1px -1px 4px var(--cor-cinza-um-sombra);
-    border: 1px solid var(--cor-cinza-sete);
-    transition: color 0.12s ease-in-out, border-color 0.12s ease-in-out;
-    transition: opacity .3s linear,transform .2s ease-out;
+    border: 2px solid var(--cor-cinza-sete);
+    transition: opacity .3s linear,transform .2s ease-out,color 0.12s ease-in-out, border-color 0.2s ease-in-out;
 }
 
 .invisivel-topico{
@@ -115,6 +114,7 @@
 
 .menu-ativo{
     color: var(--cor-primaria) !important;
+    border-color: var(--cor-primaria) !important;
     box-shadow: inset 2px 2px 3px var(--cor-cinza-tres), inset -2px -2px 3px var(--cor-cinza-tres) !important;
     pointer-events: none;
 }

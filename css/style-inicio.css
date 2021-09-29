@@ -1,7 +1,3 @@
-/*----------------Importações----------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
-
 /*----------------Classes-Gerais----------------*/
 
 .text-align-center{
@@ -11,24 +7,18 @@
 /*----------------Layout da Página----------------*/
 
 body{
-    font-family: 'Oxygen', sans-serif;
     display: flex;
     width: 100vw;
     overflow: hidden;
+    align-items: center;
     height: 100vh;
     background-color: var(--cor-cinza-um);
 }
 .layout-principal{
-    margin: auto;
     width: 100%;
 }
 
 /*----------------Titulos----------------*/
-
-.conteudo{
-    max-width: 1020px;
-    margin: auto;
-}
 
 .titulo h1{
     z-index: 10;
@@ -90,7 +80,6 @@ body{
     justify-content: space-around;
     position: absolute;
     bottom: -46px;
-
 }
 
 .atomos{
@@ -99,7 +88,7 @@ body{
     width: 35px;
     height: 35px;
     border-radius: 50%;
-    filter: blur(8px);
+    filter: blur(7px) drop-shadow(4px 4px 10px #fff) ;
     animation: atomo 5s linear infinite;
 }
 
@@ -127,7 +116,6 @@ body{
     height: 28px;
     animation-delay: 3s;
 }
-
 
 @keyframes atomo{
     0%{

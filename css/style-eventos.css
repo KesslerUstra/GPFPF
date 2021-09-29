@@ -1,11 +1,6 @@
-/*----------------Importações----------------*/
-
-@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
-
 /*----------------Layout da Página----------------*/
 
 body{
-    font-family: 'Oxygen', sans-serif;
     width: 100%;
     min-height: 100vh;
     background-color: var(--cor-cinza-sete);
