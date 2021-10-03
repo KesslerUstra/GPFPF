@@ -20,20 +20,37 @@ body{
 
 /*----------------Titulos----------------*/
 
-.titulo h1{
+.titulo h1, .titulo h2{
     z-index: 10;
     letter-spacing: 8px;
     font-size: 48px;
     color: var(--cor-primaria);
-    margin-bottom: 30px;
 }
 
-.subtitulo h2{ 
+.titulo h2{
+    font-size: 20px;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.subtitulo{
+    margin-top: 20px;
+}
+
+.subtitulo h2{
     z-index: 10;
     letter-spacing: 4px;
     margin-top: 30px;
     font-size: 24px;
     color: var(--cor-primaria);
+}
+
+.titulo img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+
 }
 
 /*----------------Menu----------------*/
@@ -64,6 +81,9 @@ body{
     border-radius: 20px;
     box-shadow: 3px 3px 4px var(--cor-cinza-tres), -1px -1px 2px var(--cor-cinza-tres);
     transition: all 0.2s cubic-bezier(.17,.67,1,2);
+    -o-transition: all 0.2s cubic-bezier(.17,.67,1,2);
+    -moz-transition: all 0.2s cubic-bezier(.17,.67,1,2);
+    -webkit-transition: all 0.2s cubic-bezier(.17,.67,1,2);
     text-transform: capitalize;
 }
 
@@ -90,6 +110,7 @@ body{
     border-radius: 50%;
     filter: blur(7px) drop-shadow(4px 4px 10px #fff) ;
     animation: atomo 5s linear infinite;
+    
 }
 
 .atomos:nth-child(1){

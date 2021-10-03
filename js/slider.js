@@ -5,7 +5,7 @@ const slidesP = document.querySelectorAll('.slides-pesquisadores');
 const buttonsP = document.querySelectorAll('.button-pesquisadores');
 const buttonLeftP = document.querySelector('.button-left-pesquisadores');
 const buttonRightP = document.querySelector('.button-right-pesquisadores');
-var imgAtualP = 0, imgProxP = 1, imgAntP = (slidesP.length -1);
+var variaveisP ={imgAtual : 0, imgProx : 1, imgAnt : (slidesP.length -1)};
 var funcaoP;
 
 /*----------------Variaveis Estudantes----------------*/
@@ -15,147 +15,56 @@ const slidesE = document.querySelectorAll('.slides-estudantes');
 const buttonsE = document.querySelectorAll('.button-estudantes');
 const buttonLeftE = document.querySelector('.button-left-estudantes');
 const buttonRightE = document.querySelector('.button-right-estudantes');
-var imgAtualE = 0, imgProxE = 1, imgAntE = (slidesE.length -1);
+var variaveisE ={imgAtual : 0, imgProx : 1, imgAnt : (slidesE.length -1)};
 var funcaoE;
 
+/*----------------Funções Gerais----------------*/
 
-/*----------------Funções Pesquisadores----------------*/
-
-function rodarImagensP(direcao){
-    slidesP[imgAtualP].classList.remove('slide-visivel');
-    slidesP[imgProxP].classList.remove('slide-proximo');
-    slidesP[imgAntP].classList.remove('slide-anterior');
-    buttonsP[imgAtualP].classList.remove('button-ativo');
+function rodarImagens(direcao,slides,buttons,variaveis){
+    slides[variaveis.imgAtual].classList.remove('slide-visivel');
+    slides[variaveis.imgProx].classList.remove('slide-proximo');
+    slides[variaveis.imgAnt].classList.remove('slide-anterior');
+    buttons[variaveis.imgAtual].classList.remove('button-ativo');
 
     if(direcao == 1){   
-        if(imgAtualP == (slidesP.length -1)){
-            imgAtualP = 0;
+        if(variaveis.imgAtual == (slides.length -1)){
+            variaveis.imgAtual = 0;
         }else{
-            imgAtualP ++;
+            variaveis.imgAtual ++;
         }
-        if(imgProxP == (slidesP.length -1)){
-            imgProxP = 0;
+        if(variaveis.imgProx == (slides.length -1)){
+            variaveis.imgProx = 0;
         }else{
-            imgProxP ++;
+            variaveis.imgProx ++;
         }
-        if(imgAntP == (slidesP.length -1)){
-            imgAntP = 0;
+        if(variaveis.imgAnt == (slides.length -1)){
+            variaveis.imgAnt = 0;
         }else{
-            imgAntP ++;
+            variaveis.imgAnt ++;
         }
     }else if(direcao == 0){
-        if(imgAtualP == 0){
-            imgAtualP = slidesP.length -1;
+        if(variaveis.imgAtual == 0){
+            variaveis.imgAtual = slides.length -1;
         }else{
-            imgAtualP --;
+            variaveis.imgAtual --;
         }
-        if(imgProxP == 0){
-            imgProxP = slidesP.length -1;
+        if(variaveis.imgProx == 0){
+            variaveis.imgProx = slides.length -1;
         }else{  
-            imgProxP --;
+            variaveis.imgProx --;
         }
-        if(imgAntP == 0){
-            imgAntP = slidesP.length -1;
+        if(variaveis.imgAnt == 0){
+            variaveis.imgAnt = slides.length -1;
         }else{  
-            imgAntP --;
+            variaveis.imgAnt --;
         }
     }
 
-    slidesP[imgAtualP].classList.add('slide-visivel');
-    slidesP[imgProxP].classList.add('slide-proximo');
-    slidesP[imgAntP].classList.add('slide-anterior');
-    buttonsP[imgAtualP].classList.add('button-ativo');
+    slides[variaveis.imgAtual].classList.add('slide-visivel');
+    slides[variaveis.imgProx].classList.add('slide-proximo');
+    slides[variaveis.imgAnt].classList.add('slide-anterior');
+    buttons[variaveis.imgAtual].classList.add('button-ativo');
 }
-
-function pararP(){
-    clearInterval(funcaoP);
-}
-
-function inicioP(){
-    funcaoP = setInterval(function(){rodarImagensP(1)},3000);
-}
-
-function voltarP(){
-    rodarImagensP(0);
-    buttonToggle(buttonLeftP);
-    setTimeout(function(){buttonToggle(buttonLeftP)},300);
-}
-
-function prosseguirP(){
-    rodarImagensP(1);
-    buttonToggle(buttonRightP);
-    setTimeout(function(){buttonToggle(buttonRightP)},300);
-}
-
-/*----------------Funções Estudantes----------------*/
-
-function rodarImagensE(direcao){
-    slidesE[imgAtualE].classList.remove('slide-visivel');
-    slidesE[imgProxE].classList.remove('slide-proximo');
-    slidesE[imgAntE].classList.remove('slide-anterior');
-    buttonsE[imgAtualE].classList.remove('button-ativo');
-
-    if(direcao == 1){
-        if(imgAtualE == (slidesE.length -1)){
-            imgAtualE = 0;
-        }else{
-            imgAtualE ++;
-        }
-        if(imgProxE == (slidesE.length -1)){
-            imgProxE = 0;
-        }else{
-            imgProxE ++;
-        }
-        if(imgAntE == (slidesE.length -1)){
-            imgAntE = 0;
-        }else{
-            imgAntE ++;
-        }
-    }else if(direcao == 0){
-        if(imgAtualE == 0){
-            imgAtualE = slidesE.length -1;
-        }else{
-            imgAtualE --;
-        }
-        if(imgProxE == 0){
-            imgProxE = slidesE.length -1;
-        }else{  
-            imgProxE --;
-        }
-        if(imgAntE == 0){
-            imgAntE = slidesE.length -1;
-        }else{  
-            imgAntE --;
-        }
-    }
-
-    slidesE[imgAtualE].classList.add('slide-visivel');
-    slidesE[imgProxE].classList.add('slide-proximo');
-    slidesE[imgAntE].classList.add('slide-anterior');
-    buttonsE[imgAtualE].classList.add('button-ativo');
-}
-
-function pararE(){
-    clearInterval(funcaoE);
-}
-
-function inicioE(){
-    funcaoE = setInterval(function(){rodarImagensE(1)},3000);
-}
-
-function voltarE(){
-    rodarImagensE(0);
-    buttonToggle(buttonLeftE);
-    setTimeout(function(){buttonToggle(buttonLeftE)},300);
-}
-
-function prosseguirE(){
-    rodarImagensE(1);
-    buttonToggle(buttonRightE);
-    setTimeout(function(){buttonToggle(buttonRightE)},300);
-}
-
-/*----------------Funções Gerais----------------*/
 
 function buttonToggle(button){
     button.classList.toggle('button-pause');
@@ -177,3 +86,49 @@ function iniciar(){
 }
 
 window.addEventListener("load",iniciar);
+
+/*----------------Funções Pesquisadores----------------*/
+
+function pararP(){
+    clearInterval(funcaoP);
+}
+
+function inicioP(){
+    funcaoP = setInterval(function(){rodarImagens(1,slidesP,buttonsP,variaveisP)},3000);
+}
+
+function voltarP(){
+    rodarImagens(0,slidesP,buttonsP,variaveisP)
+    buttonToggle(buttonLeftP);
+    setTimeout(function(){buttonToggle(buttonLeftP)},300);
+}
+
+function prosseguirP(){
+    rodarImagens(1,slidesP,buttonsP,variaveisP)
+    buttonToggle(buttonRightP);
+    setTimeout(function(){buttonToggle(buttonRightP)},300);
+}
+
+/*----------------Funções Estudantes----------------*/
+
+
+function pararE(){
+    clearInterval(funcaoE);
+}
+
+function inicioE(){
+    funcaoE = setInterval(function(){rodarImagens(1,slidesE,buttonsE,variaveisE)},3000);
+
+}
+
+function voltarE(){
+    rodarImagens(0,slidesE,buttonsE,variaveisE);
+    buttonToggle(buttonLeftE);
+    setTimeout(function(){buttonToggle(buttonLeftE)},300);
+}
+
+function prosseguirE(){
+    rodarImagens(1,slidesE,buttonsE,variaveisE);
+    buttonToggle(buttonRightE);
+    setTimeout(function(){buttonToggle(buttonRightE)},300);
+}

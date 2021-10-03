@@ -1,5 +1,9 @@
 /*----------------Layout da Página----------------*/
 
+html {
+  scroll-behavior: smooth;
+}
+
 body{
     width: 100%;
     min-height: 100vh;
@@ -56,14 +60,17 @@ body{
     height: 250px;
     transform-style: preserve-3d;
     transition:  ease-in-out 0.6s;
+    -o-transition: ease-in-out 0.6s;
+    -moz-transition: ease-in-out 0.6s;
+    -webkit-transition: ease-in-out 0.6s;
     margin: auto;
 }
 
 .face{
     cursor: pointer;
-    box-shadow: 2px 2px 4px var(--cor-cinza-cinco), inset -1px -1px 1px var(--cor-cinza-tres);
+    box-shadow: 2px 2px 4px var(--cor-cinza-seis), inset -1px -1px 1px var(--cor-cinza-seis);
     position: absolute;
-    border: 3px solid var(--cor-cinza-um);
+    border: 3px solid var(--cor-cinza-seis);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -143,15 +150,15 @@ body{
     font-size: 18px;
 }
 
-.conteudo-tabela .link-Lattes{
+.conteudo-tabela .link{
     margin-top: 70px;
 }
 
-.conteudo-tabela .link-Lattes h2{
+.conteudo-tabela .link h2{
     margin-bottom: 40px;
 }
 
-.conteudo-tabela .link-Lattes .links{
+.conteudo-tabela .link .links{
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -160,7 +167,7 @@ body{
     margin-bottom: 50px;
 }
 
-.conteudo-tabela .link-Lattes a{
+.conteudo-tabela .link a{
     color: #fff;
     padding: 20px;
     display: block;
@@ -168,16 +175,19 @@ body{
     font-size: min(5vw,20px);
     border: 3px solid #fff;
     transition: 0.15s cubic-bezier(.17,.67,1,2);
+    -o-transition: 0.15s cubic-bezier(.17,.67,1,2);
+    -moz-transition: 0.15s cubic-bezier(.17,.67,1,2);
+    -webkit-transition: 0.15s cubic-bezier(.17,.67,1,2);
     position: relative;
     background-color: var(--cor-cinza-tres);
 }
 
-.conteudo-tabela .link-Lattes  span{
+.conteudo-tabela .link span{
     z-index: 10;
     position: relative;
 }
 
-.conteudo-tabela .link-Lattes a::before{
+.conteudo-tabela .link a::before{
     content: '';
     top: 6px;
     left: -3px;
@@ -187,13 +197,16 @@ body{
     position: absolute;
     transform: scaleX(1);
     transition: 0.3s ease-in-out 0.3s;
+    -o-transition: 0.3s ease-in-out 0.3s;
+    -moz-transition: 0.3s ease-in-out 0.3s;
+    -webkit-transition: 0.3s ease-in-out 0.3s;
 }
 
-.conteudo-tabela .link-Lattes a:hover:before{
+.conteudo-tabela .link a:hover:before{
     transform: scaleY(0);
 }
 
-.conteudo-tabela .link-Lattes a::after{
+.conteudo-tabela .link a::after{
     content: '';
     left: 6px;
     top: -3px;
@@ -203,9 +216,12 @@ body{
     position: absolute;
     transform: scaleX(1);
     transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
 }
 
-.conteudo-tabela .link-Lattes a:hover::after{
+.conteudo-tabela .link a:hover::after{
     transform: scaleX(0);
 }
 
@@ -215,6 +231,7 @@ body{
     text-align: center;
     max-width: 1000px;
     margin: auto;
+    margin-bottom: 100px;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -264,7 +281,7 @@ body{
 }
 
 .conteudo-linhas .divisao-linhas .formacao p{
-    font-size: 16px;
+    font-size: 18px;
     margin-bottom: 20px;
 }
 
@@ -272,4 +289,24 @@ body{
     width: 80%;
     text-align: justify;
     margin: auto;
+}
+
+.botao-topo{
+    margin-top: 100px;
+    font-size: 40px;
+    color: var(--cor-cinza-um);
+    padding: 5px;
+    width: 130px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 3px var(--cor-cinza-seis), -2px -2px 3px var(--cor-cinza-seis);
+    transition: 0.15s ease-in-out;
+    -o-transition: 0.15s ease-in-out;
+    -moz-transition: 0.15s ease-in-out;
+    -webkit-transition: 0.15s ease-in-out;
+}
+
+.botao-topo:hover{
+    box-shadow: inset 2px 2px 3px var(--cor-cinza-seis), inset -2px -2px 3px var(--cor-cinza-seis);
+    background-color: var(--cor-cinza-cinco);
+    color: var(--cor-quintenaria);
 }

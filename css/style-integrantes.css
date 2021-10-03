@@ -73,7 +73,6 @@ body{
     border-radius: 10px;
     color: var(--cor-cinza-quatro);
     user-select: none;
-
 }
 
 .button-left-pesquisadores:hover, .button-right-pesquisadores:hover{
@@ -95,6 +94,9 @@ body{
     min-height: 400px;
     transform: translateX(300px);
     transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -webkit-transition: all 0.4s linear;
 }
 
 .slides-pesquisadores img, .slides-estudantes img{
@@ -122,7 +124,9 @@ body{
     color: var(--cor-cinza-quatro);
     position: relative;
     transition: 0.15s cubic-bezier(.17,.67,1,2);
-
+    -o-transition: 0.15s cubic-bezier(.17,.67,1,2);
+    -moz-transition: 0.15s cubic-bezier(.17,.67,1,2);
+    -webkit-transition: 0.15s cubic-bezier(.17,.67,1,2);
 }
 
 .slides-pesquisadores a span, .slides-estudantes a span{
@@ -140,6 +144,9 @@ body{
     position: absolute;
     transform: scaleX(1);
     transition: 0.3s ease-in-out 0.3s;
+    -o-transition: 0.3s ease-in-out 0.3s;
+    -moz-transition: 0.3s ease-in-out 0.3s;
+    -webkit-transition: 0.3s ease-in-out 0.3s;
 }
 
 .slides-pesquisadores a:hover:before, .slides-estudantes a:hover::before{
@@ -156,6 +163,9 @@ body{
     position: absolute;
     transform: scaleX(1);
     transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
 }
 
 .slides-pesquisadores a:hover::after, .slides-estudantes a:hover::after{
@@ -194,10 +204,18 @@ body{
     height: 10px;
     border: 2px solid var(--cor-quintenaria);
     transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
 }
 
 .button-ativo{
     background-color: var(--cor-quintenaria);
+
+}
+
+.universidade span:nth-child(1){
+    color: var(--cor-quintenaria);
 }
 
 /*----------------Estudantes----------------*/
@@ -216,6 +234,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    color: var(--cor-cinza-sete) !important;
+
 }
 
 .estudantes h2{
@@ -248,6 +268,14 @@ body{
 
 .slides-estudantes a::after{
     background-color: var(--cor-cinza-tres);
+}
+
+.formacao, .universidade{
+    margin: 15px 0px;
+}
+
+.formacao span:nth-child(1){
+    color: var(--cor-primaria);
 }
 
 /*----------------Medias----------------*/

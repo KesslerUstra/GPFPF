@@ -115,6 +115,9 @@ body{
     margin-bottom: 10px;
     box-shadow: 1px 1px 3px var(--cor-cinza-um);
     transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+    -moz-transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out, width 0.2s ease-in-out;
 }
 
 .formulario .formularios-partes textarea{
@@ -126,7 +129,11 @@ body{
     padding: 20px 15px;
     border-radius: 10px;    
     resize: vertical;
-    transition: border-color 0.2s ease-in-out
+    transition: border-color 0.2s ease-in-out;
+    transition: border-color 0.2s ease-in-out;
+    -o-transition: border-color 0.2s ease-in-out;
+    -moz-transition: border-color 0.2s ease-in-out;
+    -webkit-transition: border-color 0.2s ease-in-out;
 }
 
 .formulario .formularios-partes input:focus,.formulario .formularios-partes textarea:focus{
@@ -145,7 +152,12 @@ body{
     font-family: 'Oxygen', sans-serif;
     font-size: 20px;
     cursor: pointer;
+    margin-bottom: 30px;
     transition: color 0.3s ease-out,background-color 0.2s ease-in-out;
+    transition: color 0.3s ease-out,background-color 0.2s ease-in-out;
+    -o-transition: color 0.3s ease-out,background-color 0.2s ease-in-out;
+    -moz-transition: color 0.3s ease-out,background-color 0.2s ease-in-out;
+    -webkit-transition: color 0.3s ease-out,background-color 0.2s ease-in-out;
 }
 
 .formulario button:hover{
