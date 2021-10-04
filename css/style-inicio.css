@@ -7,12 +7,14 @@
 /*----------------Layout da Página----------------*/
 
 body{
-    display: flex;
-    width: 100vw;
-    overflow: hidden;
-    align-items: center;
-    height: 100vh;
     background-color: var(--cor-cinza-um);
+}
+
+.flex{
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
 }
 .layout-principal{
     width: 100%;
@@ -41,6 +43,7 @@ body{
     z-index: 10;
     letter-spacing: 4px;
     margin-top: 30px;
+    margin-bottom: 50px;
     font-size: 24px;
     color: var(--cor-primaria);
 }
@@ -99,11 +102,12 @@ body{
     align-items: center;
     justify-content: space-around;
     position: absolute;
-    bottom: -46px;
+    bottom: 0;
 }
 
 .atomos{
-    z-index: -5;
+    opacity: 0;
+    z-index: -1;
     background-color: var(--cor-tercearia);
     width: 35px;
     height: 35px;
