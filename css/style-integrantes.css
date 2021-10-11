@@ -44,9 +44,11 @@ body{
 /*----------------Slider Pesquisadores----------------*/
 
 .layout-slider-pesquisadores, .layout-slider-estudantes{
-    display: flex;
+    display: grid;
     margin: auto auto;
-    flex-direction: row;
+    grid-template-areas: 
+    "btnEsquerda slider btnDireita"
+    ;
     align-items: center;
     gap: 50px;
     width: 100%;
@@ -54,6 +56,7 @@ body{
 }
 
 .slider-pesquisadores, .slider-estudantes{
+    grid-area: slider;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -62,6 +65,14 @@ body{
     margin: 10px auto;
     position: relative;
     overflow: hidden;
+}
+
+.button-left-pesquisadores, .button-left-estudantes{
+    grid-area: btnEsquerda;
+}
+
+.button-right-pesquisadores, .button-right-estudantes{
+    grid-area: btnDireita;
 }
 
 .button-left-pesquisadores, .button-right-pesquisadores, .button-left-estudantes, .button-right-estudantes{
@@ -280,16 +291,13 @@ body{
 
 /*----------------Medias----------------*/
 
-@media only screen and (min-width: 430px) {
+@media only screen and (max-width: 500px) {
     .layout-slider-pesquisadores, .layout-slider-estudantes{
-        flex-direction: row;
-    }
-}
-
-@media only screen and (max-width: 430px) {
-    .layout-slider-pesquisadores, .layout-slider-estudantes{
-        flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        grid-template-areas: 
+        "slider slider "
+        "btnEsquerda btnDireita"
+        ;
     }
 
     .buttons-pesquisadores, .buttons-estudantes{
