@@ -1,0 +1,26 @@
+/*----------------Header----------------*/
+
+header{
+    display: flex;
+    flex-direction: row;
+    background-color: var(--cor-cinza-um);
+    align-items: center;
+    justify-content: space-between;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0px 1%;
+}
+
+.enchimento{
+    width: 50px;
+}
+
+/*----------------Media Rule----------------*/
+
+@media screen and (max-width: 400px){
+    header{
+        flex-direction: column-reverse;
+    }
+}

@@ -1,25 +1,39 @@
 /*----------------Variaveis----------------*/
 
-var btnMenuAbrir  = document.querySelector('.menu-icone');
-var btnMenuFechar = document.querySelector('.exit-menu')
+var btnMenu = document.querySelector('.menu-icone');
 var menu = document.querySelector('.menu');
-var topicos = document.querySelectorAll('.topico-menu')
+var topicos = document.querySelectorAll('.topico-menu');
+var header = document.querySelector('.header')
 var funcaoTempo;
-
+var menuControlador = 0;
 
 /*----------------Funções----------------*/
 
 function iniciar(){
-    btnMenuAbrir.addEventListener("click",abrirMenu);
-    btnMenuFechar.addEventListener("click",fecharMenu);
+    btnMenu.addEventListener("click",menuFuncao);
     topicos.forEach(element => {
-        element.classList.add('invisivel-topico')
+        element.classList.add('invisivel-topico');
     });
+
+    const propriedades = header.getBoundingClientRect();
+    menu.style.height = "calc(100% - "+propriedades.height+"px)"
+}
+
+function menuFuncao(){
+    if(menuControlador == 0){
+        abrirMenu()
+        menuControlador = 1
+    }
+    else if(menuControlador == 1){
+        fecharMenu()
+        menuControlador = 0
+    }
 }
 
 function abrirMenu(){
     let temp = 100;
     menu.classList.remove('invisivel');
+    btnMenu.classList.add('ativo');
     funcaoTempo = true;
     topicos.forEach(element => {
         if(funcaoTempo == true){
@@ -35,17 +49,16 @@ function aparecer(element){
 
 function fecharMenu(){
     menu.classList.add('invisivel');
+    btnMenu.classList.remove('ativo');
     funcaoTempo = false;
-    setTimeout(desaparecer,0)
-    setTimeout(desaparecer,300)
+    setTimeout(desaparecer,0);
+    setTimeout(desaparecer,300);
 }
 
 function desaparecer(){
     topicos.forEach(element => {
-        element.classList.add('invisivel-topico')
+        element.classList.add('invisivel-topico');
     });
 }
-
-
 
 window.addEventListener("load",iniciar);

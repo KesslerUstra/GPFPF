@@ -15,7 +15,6 @@ body{
 .titulo{
     text-transform: uppercase;
     color: var(--cor-primaria);
-    background-color: var(--cor-cinza-um);
     display: flex;
     align-items: center;
     justify-content: center;
