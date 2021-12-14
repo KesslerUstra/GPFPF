@@ -23,17 +23,17 @@
         <div class="layout-principal">
             <div class="titulo text-align-center">
                 <h1>GPFPF</h1>
-                <img src="img/logo-1.png" alt="Logo do grupo">
+                <img src="img/logo-1.png" alt="Logo do GPFPF">
                 <h2>Grupo de Pesquisa na Formação de Professores de Física</h2>
             </div>
             <nav class="menu text-align-center">
                 <div class="menu-conteudo">
                     <ul>
-                        <li><a href="html/sobre">Sobre</a></li>
-                        <li><a href="html/integrantes">Integrantes</a></li>
-                        <li><a href="html/eventos">Eventos</a></li>
-                        <li><a href="html/producao">Produção</a></li>
-                        <li><a href="html/contatos">Contatos</a></li>
+                        <li><a href="html/sobre" class="aparecer">Sobre</a></li>
+                        <li><a href="html/integrantes" class="aparecer">Integrantes</a></li>
+                        <li><a href="html/eventos" class="aparecer">Eventos</a></li>
+                        <li><a href="html/producao" class="aparecer">Produção</a></li>
+                        <li><a href="html/contatos" class="aparecer">Contatos</a></li>
                     </ul>
                 </div>
             </nav>
@@ -42,6 +42,14 @@
             </div>
         </div>
     </div>
-    
+
+    <script>
+        objs = document.querySelectorAll('.aparecer')
+        time = 0
+        objs.forEach(element => {
+            element.style.animationDelay = time+'ms'
+            time += 100
+        });
+    </script>
 </body>
 </html>

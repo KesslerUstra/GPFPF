@@ -23,7 +23,7 @@ body{
 
 .pesquisadores{
     text-align: center;
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     min-height: 80vh;
     display: flex;
@@ -50,9 +50,7 @@ body{
     "btnEsquerda slider btnDireita"
     ;
     align-items: center;
-    gap: 50px;
     width: 100%;
-    max-width: 500px;
 }
 
 .slider-pesquisadores, .slider-estudantes{
@@ -60,7 +58,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 300px;
+    width: 650px;
     min-height: 400px;
     margin: 10px auto;
     position: relative;
@@ -79,13 +77,13 @@ body{
     font-size: 24px;
     text-align: center;
     padding: 10px 12px;
+    width: 70px;
     cursor: pointer;
     border: 2px solid rgba(0, 0, 0, 0.048);
     border-radius: 10px;
     color: var(--cor-cinza-quatro);
     user-select: none;
 }
-
 .button-left-pesquisadores:hover, .button-right-pesquisadores:hover{
     background-color: var(--cor-cinza-cinco);
 }
@@ -103,7 +101,7 @@ body{
     justify-content: center;
     opacity: 0;
     min-height: 400px;
-    transform: translateX(300px);
+    transform: scale(0%);
     transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
@@ -183,8 +181,13 @@ body{
     transform: scaleX(0);
 }
 
+.slide-anterior_2{
+    transform: translateX(-480px) scale(0%) !important;
+}
+
 .slide-anterior{
-    transform: translateX(-330px) !important;
+    transform: translateX(-240px) scale(50%) !important;
+    opacity: 1 !important;
 }
 
 .slide-visivel{
@@ -193,7 +196,12 @@ body{
 }
 
 .slide-proximo{
-    transform: translateX(330px) !important;
+    transform: translateX(240px) scale(50%) !important;
+    opacity: 1 !important;
+}
+
+.slide-proximo_2{
+    transform: translateX(480px) scale(0%) !important;
 }
 
 .buttons-pesquisadores, .buttons-estudantes{
@@ -206,8 +214,6 @@ body{
     justify-content: center;
     align-items: center;
 }
-
-
 
 .button-pesquisadores, .button-estudantes{
     width: 10px;
@@ -239,7 +245,7 @@ body{
 
 .estudantes{
     text-align: center;
-    max-width: 600px;
+    max-width: 900px;
     margin: auto;
     min-height: 80vh;
     display: flex;
@@ -290,6 +296,16 @@ body{
 }
 
 /*----------------Medias----------------*/
+
+@media only screen and (max-width: 800px) {
+    .slider-pesquisadores, .slider-estudantes{
+        width: 300px;
+    }
+
+    .button-left-pesquisadores, .button-right-pesquisadores, .button-left-estudantes, .button-right-estudantes{
+        justify-self: center;
+    }
+}
 
 @media only screen and (max-width: 500px) {
     .layout-slider-pesquisadores, .layout-slider-estudantes{

@@ -142,6 +142,24 @@ body{
     animation-delay: 3s;
 }
 
+.aparecer{
+    opacity: 0;
+    animation: surgir 0.5s ease-out forwards;
+}
+
+@keyframes surgir{
+    0%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
 @keyframes atomo{
     0%{
         transform: translateY(0);

@@ -46,7 +46,8 @@ body{
 .conteudo-geral p{
     color: var(--cor-cinza-um);
     margin-bottom: 20px;
-    font-size: 20px;
+    font-size: clamp(0.7em,1em,1.4em);
+    line-height: 1.5em;
     text-align: justify;
     padding: 5px 10px;
 }
@@ -287,6 +288,8 @@ body{
 .conteudo-linhas .divisao-linhas .formacao .objetivo-linhas{
     width: 80%;
     text-align: justify;
+    font-size: clamp(0.7em,1em,1.4em);
+    line-height: 1.5em;
     margin: auto;
 }
 
@@ -308,4 +311,35 @@ body{
     box-shadow: inset 2px 2px 3px var(--cor-cinza-seis), inset -2px -2px 3px var(--cor-cinza-seis);
     background-color: var(--cor-cinza-cinco);
     color: var(--cor-quintenaria);
+}
+
+.aparecer{
+    animation: surgir 0.7s ease-out;
+}
+
+@keyframes surgir{
+    0%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.transition{
+    transition: 0.7s ease-out;
+}
+
+.reveal{
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+@media only screen and (max-width: 500px) {
+    .conteudo-geral p{
+        text-align: center;
+    }
 }

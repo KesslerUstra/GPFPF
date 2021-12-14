@@ -5,7 +5,7 @@ const slidesP = document.querySelectorAll('.slides-pesquisadores');
 const buttonsP = document.querySelectorAll('.button-pesquisadores');
 const buttonLeftP = document.querySelector('.button-left-pesquisadores');
 const buttonRightP = document.querySelector('.button-right-pesquisadores');
-var variaveisP ={imgAtual : 0, imgProx : 1, imgAnt : (slidesP.length -1)};
+var variaveisP ={imgAtual : 0, imgProx : 1, imgProx2 : 2, imgAnt : (slidesP.length -1), imgAnt2 : (slidesP.length -2)};
 var funcaoP;
 
 /*----------------Variaveis Estudantes----------------*/
@@ -15,15 +15,21 @@ const slidesE = document.querySelectorAll('.slides-estudantes');
 const buttonsE = document.querySelectorAll('.button-estudantes');
 const buttonLeftE = document.querySelector('.button-left-estudantes');
 const buttonRightE = document.querySelector('.button-right-estudantes');
-var variaveisE ={imgAtual : 0, imgProx : 1, imgAnt : (slidesE.length -1)};
+var variaveisE ={imgAtual : 0, imgProx : 1, imgProx2 : 2, imgAnt : (slidesE.length -1), imgAnt2 : (slidesE.length -2)};
 var funcaoE;
+
+/*----------------Variaveis Gerais----------------*/
+
+var rodando = 1
 
 /*----------------Funções Gerais----------------*/
 
 function rodarImagens(direcao,slides,buttons,variaveis){
     slides[variaveis.imgAtual].classList.remove('slide-visivel');
     slides[variaveis.imgProx].classList.remove('slide-proximo');
+    slides[variaveis.imgProx2].classList.remove('slide-proximo_2');
     slides[variaveis.imgAnt].classList.remove('slide-anterior');
+    slides[variaveis.imgAnt2].classList.remove('slide-anterior_2');
     buttons[variaveis.imgAtual].classList.remove('button-ativo');
 
     if(direcao == 1){   
@@ -37,10 +43,20 @@ function rodarImagens(direcao,slides,buttons,variaveis){
         }else{
             variaveis.imgProx ++;
         }
+        if(variaveis.imgProx2 == (slides.length -1)){
+            variaveis.imgProx2 = 0;
+        }else{
+            variaveis.imgProx2 ++;
+        }
         if(variaveis.imgAnt == (slides.length -1)){
             variaveis.imgAnt = 0;
         }else{
             variaveis.imgAnt ++;
+        }
+        if(variaveis.imgAnt2 == (slides.length -1)){
+            variaveis.imgAnt2 = 0;
+        }else{
+            variaveis.imgAnt2 ++;
         }
     }else if(direcao == 0){
         if(variaveis.imgAtual == 0){
@@ -53,16 +69,28 @@ function rodarImagens(direcao,slides,buttons,variaveis){
         }else{  
             variaveis.imgProx --;
         }
+        if(variaveis.imgProx2 == 0){
+            variaveis.imgProx2 = slides.length -1;
+        }else{  
+            variaveis.imgProx2 --;
+        }
         if(variaveis.imgAnt == 0){
             variaveis.imgAnt = slides.length -1;
         }else{  
             variaveis.imgAnt --;
         }
+        if(variaveis.imgAnt2 == 0){
+            variaveis.imgAnt2 = slides.length -1;
+        }else{  
+            variaveis.imgAnt2 --;
+        }
     }
 
     slides[variaveis.imgAtual].classList.add('slide-visivel');
     slides[variaveis.imgProx].classList.add('slide-proximo');
+    slides[variaveis.imgProx2].classList.add('slide-proximo_2');
     slides[variaveis.imgAnt].classList.add('slide-anterior');
+    slides[variaveis.imgAnt2].classList.add('slide-anterior_2');
     buttons[variaveis.imgAtual].classList.add('button-ativo');
 }
 
@@ -80,6 +108,7 @@ function iniciar(){
 
     inicioE();
     sliderE.addEventListener('mouseenter',pararE);
+    sliderE.addEventListener('mousemove',pararE);
     sliderE.addEventListener('mouseleave',inicioE);
     buttonLeftE.addEventListener('click',voltarE);
     buttonRightE.addEventListener('click',prosseguirE);
@@ -94,7 +123,7 @@ function pararP(){
 }
 
 function inicioP(){
-    funcaoP = setInterval(function(){rodarImagens(1,slidesP,buttonsP,variaveisP)},3000);
+    funcaoP = setInterval(function(){rodarImagens(1,slidesP,buttonsP,variaveisP)},6000);
 }
 
 function voltarP(){
@@ -117,7 +146,7 @@ function pararE(){
 }
 
 function inicioE(){
-    funcaoE = setInterval(function(){rodarImagens(1,slidesE,buttonsE,variaveisE)},3000);
+    funcaoE = setInterval(function(){rodarImagens(1,slidesE,buttonsE,variaveisE)},6000);
 
 }
 
