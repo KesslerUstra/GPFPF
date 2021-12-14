@@ -22,5 +22,6 @@ header{
 @media screen and (max-width: 400px){
     header{
         flex-direction: column-reverse;
+        position: static;
     }
 }
