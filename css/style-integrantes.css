@@ -102,6 +102,7 @@ body{
     opacity: 0;
     min-height: 400px;
     transform: scale(0%);
+    -webkit-transform: scale(0);
     transition: all 0.4s linear;
     -o-transition: all 0.4s linear;
     -moz-transition: all 0.4s linear;
@@ -183,25 +184,30 @@ body{
 
 .slide-anterior_2{
     transform: translateX(-480px) scale(0%) !important;
+    -webkit-transform: translateX(-480px) scale(0) !important;
 }
 
 .slide-anterior{
     transform: translateX(-240px) scale(50%) !important;
+    -webkit-transform: translateX(-240px) scale(0.5) !important;
     opacity: 1 !important;
 }
 
 .slide-visivel{
     transform: translateX(0px) !important;
+    -webkit-transform: translateX(0px) !important;
     opacity: 1 !important;
 }
 
 .slide-proximo{
     transform: translateX(240px) scale(50%) !important;
+    -webkit-transform: translateX(240px) scale(0.5) !important;
     opacity: 1 !important;
 }
 
 .slide-proximo_2{
     transform: translateX(480px) scale(0%) !important;
+    -webkit-transform: translateX(480px) scale(0) !important;
 }
 
 .buttons-pesquisadores, .buttons-estudantes{
@@ -209,10 +215,22 @@ body{
     display: flex;
     margin: 70px auto;
     flex-direction: row;
-    gap: 10px;
+    
     width: 90%;
     justify-content: center;
     align-items: center;
+}
+
+html.flexbox_gap .buttons-pesquisadores, html.flexbox_gap .buttons-estudantes{
+    gap: 10px;
+}
+
+html.no_flexbox_gap .button-pesquisadores, html.no_flexbox_gap .button-estudantes{
+    margin-right: 10px;
+}
+
+html.no_flexbox_gap .button-pesquisadores:last-child , html.no_flexbox_gap .button-estudantes:last-child{
+    margin-right: 0px;
 }
 
 .button-pesquisadores, .button-estudantes{
@@ -318,7 +336,18 @@ body{
 
     .buttons-pesquisadores, .buttons-estudantes{
         width: 100%;
+    }
+
+    html.flexbox_gap .buttons-pesquisadores, html.flexbox_gap .buttons-estudantes{
         gap: 5px;
+    }
+
+    html.no_flexbox_gap .button-pesquisadores, html.no_flexbox_gap .button-estudantes{
+        margin-right: 5px;
+    }
+    
+    html.no_flexbox_gap .button-pesquisadores:last-child , html.no_flexbox_gap .button-estudantes:last-child{
+        margin-right: 0px;
     }
 
     .button-left-pesquisadores, .button-right-pesquisadores, .button-left-estudantes, .button-right-estudantes{

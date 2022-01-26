@@ -67,8 +67,20 @@ body{
 .menu-conteudo ul{
     justify-content: center;
     display: flex;
-    gap: 30px;
     flex-flow: row wrap;
+}
+
+html.flexbox_gap .menu-conteudo ul{
+    gap: 30px;
+}
+
+html.no_flexbox_gap .menu-conteudo ul li{
+    margin-right: 30px;
+    margin-bottom: 10px;
+}
+
+html.no_flexbox_gap .menu-conteudo ul li:last-child{
+    margin-right: 0px;
 }
 
 .menu-conteudo ul li{

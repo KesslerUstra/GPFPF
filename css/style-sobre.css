@@ -252,8 +252,16 @@ body{
 .conteudo-linhas .divisao-linhas{
     display: flex;
     flex-wrap: wrap;
-    gap: 40px;
     justify-content: center;
+}
+
+html.flexbox_gap .conteudo-linhas .divisao-linhas{
+    gap: 40px;
+}
+
+html.no_flexbox_gap .conteudo-linhas .divisao-linhas .formacao:nth-child(1){
+    margin-right: 40px;
+    margin-bottom: 10px;
 }
 
 .conteudo-linhas .divisao-linhas .formacao{
@@ -341,5 +349,12 @@ body{
 @media only screen and (max-width: 500px) {
     .conteudo-geral p{
         text-align: center;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    html.no_flexbox_gap .conteudo-linhas .divisao-linhas .formacao:nth-child(1){
+        margin-bottom: 20px;
+        margin-right: 0px;
     }
 }
