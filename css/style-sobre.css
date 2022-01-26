@@ -129,9 +129,16 @@ body{
     display: flex;
     flex-direction: row;
     padding: 0px 10px;
-    gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+html.flexbox_gap .conteudo-tabela .identificacao{
+    gap: 30px;
+}
+
+html.no_flexbox_gap .conteudo-tabela .identificacao{
+    margin: 10px;
 }
 
 .conteudo-tabela .identificacao  h4,.conteudo-tabela .identificacao  p{
