@@ -137,7 +137,7 @@ html.flexbox_gap .conteudo-tabela .identificacao{
     gap: 30px;
 }
 
-html.no_flexbox_gap .conteudo-tabela .identificacao{
+html.no_flexbox_gap .conteudo-tabela .identificacao div{
     margin: 10px;
 }
 
