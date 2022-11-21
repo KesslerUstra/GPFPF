@@ -1,0 +1,194 @@
+/*Titulo*/
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    padding: 120px 0px 100px;
+    background: linear-gradient(135deg, #045de9 20%, #272bfc 80%);
+}
+
+#anima_cont{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#anima_cont svg{
+    max-width: 75%;
+    max-height: 100%;
+}
+
+/*Contatos Layout*/
+
+section{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1;
+    padding: 40px 10px 20px;
+    display: flex;
+    gap: 30px;
+}
+
+section > *{
+    flex: 1;
+}
+
+/*Contatos*/
+
+.contatos, .mensagem{
+    display: flex;
+    flex-direction: column;
+}
+
+.contatos > div, .mensagem > div{
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.contatos h4, .mensagem h4{
+    margin-bottom: 40px;
+    font-weight: bold;
+    user-select: none;
+    color: #045de9;
+    font-size: 2rem;
+}
+
+.contatos .copiar{
+    padding: 5px 0px;
+    cursor: pointer;
+    margin-left: 15%;
+    display: flex;
+}
+
+.contatos i{
+    margin-right: 20px;
+    color: #999;
+    font-size: 1.2rem;
+}
+
+.contato{
+    position: relative;
+}
+
+.contatos span{
+    user-select: none;
+    font-weight: bold;
+    color: #562af1;
+    font-size: 1rem;
+}
+
+.mensagem_copiar{
+    left: 35%;
+    bottom: -40px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transform: translateY(15px);
+    user-select: none;
+    opacity: 0;
+    color: #fff;
+    padding: 7px;
+    position: absolute;
+    background-color: #562af1;
+    transition: 0.3s cubic-bezier(.07,.45,.11,.98);
+}
+
+.mensagem_copiar.ativo{
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.mensagem_copiar::after{
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-bottom-color: #562af1;
+    border-width: 10px;
+    margin-left: -10px;
+}
+
+/*Mensagem*/
+
+.mensagem form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mensagem input{
+    min-width: 300px;
+    color: #444;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid transparent;
+    transition: 0.2s;
+    padding: 12px 15px;
+}
+
+.mensagem input:focus, .mensagem textarea:focus{
+    border: 2px solid #045de9;
+}
+
+.mensagem input::placeholder, .mensagem textarea::placeholder{
+    color: #999;
+}
+
+.mensagem textarea{
+    min-width: 300px;
+    color: #444;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid transparent;
+    transition: 0.2s;
+    resize: none;
+    height: 180px;
+    padding: 10px 15px;
+}
+
+.mensagem button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: .4px;
+    width: fit-content;
+    margin:  0 auto;
+    background-color: #272bfc;
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 16px 50px;
+    user-select: none;
+    outline: none;
+    margin-top: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.mensagem button span {
+    transition: all 0.2s;
+}
+
+.mensagem button:hover span, .mensagem button:focus span {
+    transform: scale(.9);
+    opacity: .85;
+}
+
+/*__________Media Queries__________*/
+
+@media only screen and (max-width: 800px) {
+    section{
+        gap: 100px;
+        flex-direction: column;
+    }
+}

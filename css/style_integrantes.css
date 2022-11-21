@@ -1,0 +1,263 @@
+/*Titulo*/
+
+.titulo{
+    padding: 120px 0px 100px;
+    background: linear-gradient(135deg, #045de9 20%, #272bfc 80%);
+}
+
+#anima_inte{
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#anima_inte svg{
+    max-width: 85%;
+    max-height: 100%;
+}
+
+/*Pesquisadores*/
+
+.pesquisadores{
+    padding: 40px 0px 10px;
+}
+
+h2{
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+    padding-bottom: 7px;
+    color: #0355d8;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 2.1rem;
+}
+
+/*Estudantes*/
+
+.estudantes{
+    padding-bottom: 40px;
+    background-color: #1743f3;
+}
+
+.estudantes h2{
+    position: relative;
+    top: -3vw;
+    color: #fff;
+}
+
+.estudantes > svg{
+    position: relative;
+    top: -1px;
+}
+
+/*Cards Carrosel*/
+
+.pesquisadores section, .estudantes section{
+    margin: 0 auto;
+    position: relative;
+    width: fit-content;
+    padding: 30px 70px;
+    max-width: 1050px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper{
+    padding: 20px 0px!important;
+    width: 300px;
+}
+
+div.swiper-slide{
+    height: auto;
+}
+
+span.swiper-pagination-bullet{
+    height: 7px;
+    width: 26px;
+    border-radius: 25px;
+    background-color: #1840f4;
+}
+
+.estudantes span.swiper-pagination-bullet{
+    background-color: #fff;
+}
+
+div.swiper-button-prev, div.swiper-button-next{
+    color: #1840f4;
+}
+
+.estudantes div.swiper-button-prev, .estudantes div.swiper-button-next{
+    color: #fff;
+}
+
+.estudantes div.swiper-lazy-preloader{
+    border-color: #fff;
+    border-top-color: transparent;
+}
+
+.card{
+    user-select: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 280px;
+}
+
+.card svg{
+    position: relative;
+    z-index: -3;
+    top: -1px;
+}
+
+.card .fundo{
+    border-radius: 20px 20px 0 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: #045de9;
+    padding: 15px 0px 0px;
+    width: 100%;
+    z-index: -2;
+}
+
+.estudantes .card .fundo{
+    background-color: #fff;
+}
+
+.card .imagem{
+    width: 150px;
+    height: 150px;
+    position: relative;
+    border-radius: 50%;
+    padding: 4px;
+    background-color: #fff;
+}
+
+.estudantes .card .imagem{
+    background-color: #045de9;
+}
+
+.card .imagem::before, .card .imagem::after{
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.card .imagem::before{
+    width: 106%;
+    height: 106%;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.estudantes .card .imagem::before{
+    background-color: rgba(4, 92, 233, 0.4);
+}
+
+.card .imagem::after{
+    width: 112%;
+    height: 112%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.estudantes .card .imagem::after{
+    background-color: rgba(4, 92, 233, 0.2);
+}
+
+.card .imagem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card .info{
+    margin-top: 10px;
+    padding: 0px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .info span{
+    text-align: center;
+    color: #333;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.estudantes .card .info span{
+    color: #eee;
+}
+
+.card .info span:last-child{
+    color: #555;
+    font-size: 1rem;
+}
+
+.estudantes .card .info span:last-child{
+    color: #ccc;
+}
+
+.card .contato{
+    padding-bottom: 30px;
+    margin-top: auto;
+}
+
+.card .contato a{
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 24px;
+    background-color: #045de9;
+    font-size: 1.2rem;
+    margin-top: 40px;
+    display: block;
+    transition: 0.2s ease;
+}
+
+.estudantes .card .contato a{
+    color: #045de9;
+    background-color: #fff;
+}
+
+.card .contato a:hover{
+    background-color: #014eca;
+}
+
+.estudantes .card .contato a:hover{
+    background-color: #bbb;
+}
+
+
+/*__________Media Queries__________*/
+
+@media only screen and (min-width: 790px) {
+    .swiper{
+        width: 620px;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .swiper{
+        width: 950px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pesquisadores section, .estudantes section{
+        padding: 30px;
+    }
+
+    div.swiper-button-prev::after, div.swiper-button-next::after{
+        display: none;
+    }
+}

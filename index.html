@@ -5,54 +5,153 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GPFPF</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <!--CSS-->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style-inicio.css">
-    <link rel="stylesheet" href="css/cores.css">
-    <link rel="stylesheet" href="css/bug-animacao.css">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/bug_animacao.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style_inicio.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--JS-->
+    <script defer src="js/bug_animacao.js"></script>
+    <script defer src="js/script_inicio.js"></script>
+    <script defer src="js/script_header.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.1/lottie.min.js"></script>
 </head>
 <body class="preload">
-    <div class="grupo-atomos">
-        <div class="atomos"></div>
-        <div class="atomos"></div>
-        <div class="atomos"></div>
-        <div class="atomos"></div>
-        <div class="atomos"></div>
-        <div class="atomos"></div>
-    </div>
-    <div class="flex">
-        <div class="layout-principal">
-            <div class="titulo text-align-center">
-                <h1>GPFPF</h1>
-                <img src="img/logo-1.png" alt="Logo do GPFPF">
-                <h2>Grupo de Pesquisa na Formação de Professores de Física</h2>
-            </div>
-            <nav class="menu text-align-center">
-                <div class="menu-conteudo">
+    <section class="inicio">
+        <div>
+            <header>
+                <nav>
+                    <div class="menu_icone">
+                        <div class="icone_menu"></div>
+                        <div class="icone_menu"></div>
+                        <div class="icone_menu"></div>
+                    </div>
                     <ul>
-                        <li class="aparecer"><a href="html/sobre">Sobre</a></li>
-                        <li class="aparecer"><a href="html/integrantes">Integrantes</a></li>
-                        <li class="aparecer"><a href="html/eventos">Eventos</a></li>
-                        <li class="aparecer"><a href="html/producao">Produção</a></li>
-                        <li class="aparecer"><a href="html/contatos">Contatos</a></li>
+                        <li><a class="ativo">Inicio</a></li>
+                        <li><a href="integrantes">Integrantes</a></li>
+                        <li><a href="eventos">Eventos</a></li>
+                        <li><a href="producao">Produção</a></li>
+                        <li><a href="contatos">Contatos</a></li>
                     </ul>
+                </nav>
+            </header>
+            <div class="conteudo">
+                <div id="anima_logo">
                 </div>
-            </nav>
-            <div class="subtitulo text-align-center">
-                <h2>UFU</h2>
             </div>
         </div>
-    </div>
-
-    <script>
-        objs = document.querySelectorAll('.aparecer')
-        time = 0
-        objs.forEach(element => {
-            element.style.animationDelay = time+'ms'
-            time += 100
-        });
-    </script>
-    <script src="js/bug_animacao.js"></script>
-    <script src="js/check_flex_gap.js"></script>
+    </section>
+    <section class="sobre">
+        <div class="seta_sobre"></div>
+        <div class="visao_geral">
+            <h2>Visão Geral</h2>
+            <div>
+                <div>
+                <img src="assets/img/logo-circular.png" alt="Imagem de um professor ensinando a turma">
+                </div>
+                <aside>
+                    <p>O Grupo de Pesquisa na Formação de Professores de Física constituiu-se através de uma preocupação básica em reunir estudos e pesquisas desenvolvidos sobre temáticas afins no âmbito do Curso de Física da ICENP/UFU e das interações entre seus participantes em nível de graduação e pós-graduação. </p>
+                    <p>Desta forma, são implementados trabalhos de conclusão de curso, atividades investigativas relacionadas aos estágios supervisionados, iniciação à docência e pesquisas na áreas de Ensino de Física e Educação em Ciências e Matemática de modo mais amplo, num contexto de colaboração coletiva.</p>
+                </aside>
+            </div>
+        </div>
+        <div class="informacao_geral">
+            <div class="layout_informacao">
+                <div>
+                    <h4>Situação do Grupo</h4>
+                    <i></i>
+                    <span>Certificado</span>
+                </div>
+                <div>
+                    <h4>Ano de Formação</h4>
+                    <i></i>
+                    <span>2011</span>
+                </div>
+                <div>
+                    <h4>Área Predominante</h4>
+                    <i></i>
+                    <span>Ciências Humanas e Educação</span>
+                </div>
+                <div>
+                    <h4>Instituição do Grupo</h4>
+                    <i></i>
+                    <span>Universidade Federal de Uberlândia - UFU</span>
+                </div>
+            </div>
+            <h3>Saiba Mais</h3>
+            <a href="http://dgp.cnpq.br/dgp/espelhogrupo/2221780855077420" target="_blank"><span>DGP</span></a>
+        </div>
+        <div class="fundo">
+            <div class="seta_linhas"></div>
+            <div class="linhas_pesquisa">
+                <h2>Linhas de Pesquisa</h2>
+                <div class="cards">
+                    <div class="layout_card_pesquisa">
+                        <h4>Formação Inicial<br>de Professores de Física</h4>
+                        <div class="subcard">
+                            <div>
+                                <span>Setores de Aplicação</span>
+                                <p>Educação</p>
+                            </div>
+                            <div class="quantidade">
+                                <div>
+                                    <div class="seta"></div>
+                                    <i class="fa-solid fa-users"></i>
+                                    <div class="seta"></div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <span>Estudantes</span>
+                                        <p>9</p>
+                                    </div>
+                                    <div>
+                                        <span>Pesquisadores</span>
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="objetivo">
+                                <span>Descrição</span>
+                                <p>Esta linha de pesquisa envolve estudos e pesquisas cuja preocupação central é a formação inicial de professores de física, sua articulação maior com a área de Educação em Ciências e Matemática, seus contextos, espaços, saberes, perspectivas e desafios.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="linha"></div>
+                    <div class="layout_card_pesquisa">
+                        <h4>Formação Continuada<br>de Professores de Física</h4>
+                        <div class="subcard">
+                            <div>
+                                <span>Setores de Aplicação</span>
+                                <p>Outras Atividades de Ensino</p>
+                            </div>
+                            <div class="quantidade">
+                                <div>
+                                    <div class="seta"></div>
+                                    <i class="fa-solid fa-users"></i>
+                                    <div class="seta"></div>
+                                </div>
+                                <div>
+                                    <div>
+                                        <span>Estudantes</span>
+                                        <p>8</p>
+                                    </div>
+                                    <div>
+                                        <span>Pesquisadores</span>
+                                        <p>6</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="objetivo">
+                                <span>Descrição</span>
+                                <p>Esta linha de pesquisa reúne estudos e pesquisas cujo tema central é a formação continuada de professores de física, principalmente sob a perspectiva da autonomia e do desenvolvimento profissional dos professores.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>

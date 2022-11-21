@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+    <!--CSS-->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/bug_animacao.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/style_contatos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <!--JS-->
+    <script defer src="js/bug_animacao.js"></script>
+    <script defer src="js/script_header.js"></script>
+    <script defer src="js/script_contatos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.1/lottie.min.js"></script>
+</head>
+<body class="preload">
+    <header>
+        <nav>
+            <div class="menu_icone">
+                <div class="icone_menu"></div>
+                <div class="icone_menu"></div>
+                <div class="icone_menu"></div>
+            </div>
+            <ul>
+                <li><a href="/">Inicio</a></li>
+                <li><a href="integrantes">Integrantes</a></li>
+                <li><a href="eventos">Eventos</a></li>
+                <li><a href="producao">Produção</a></li>
+                <li><a class="ativo">Contatos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="titulo">
+        <div id="anima_cont"></div>
+    </div>
+    <section>
+        <div class="contatos">
+            <div>
+                <h4>Meios de contato</h4>
+                <div class="contato">
+                    <div class="copiar">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>srvustra@ufu.br</span>
+                    </div>
+                    <div class="mensagem_copiar">
+                        Email copiado
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mensagem">
+            <div>
+                <h4>Mande uma mensagem</h4>
+                <form action="https://formsubmit.co/srvustra@ufu.br" method="POST">
+                    <input type="text" required name="Nome" placeholder="Nome*" autocomplete="off">
+                    <input type="email" required name="Email" autocomplete="off" placeholder="Email*">
+                    <textarea required placeholder="Mensagem*" name="Mensagem"></textarea>
+                    <button type="submit"><span>Enviar</span></button>
+                </form>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

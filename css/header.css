@@ -1,27 +1,203 @@
-/*----------------Header----------------*/
+/*Header Layout*/
 
 header{
+    z-index: 20;
+    position: fixed;
+    width: 100%;
+    background-color: transparent;
+    transition: background-color 0.3s linear;
+}
+
+header::before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    transform-origin: bottom right;
+    pointer-events: none;
+    transform: scaleX(0);
+    transition: transform 0.4s ease-out;
+}
+
+header.ativo_bg{
+    background-color: #1247f1;
+}
+
+header.ativo_bg::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+header nav{
     display: flex;
-    flex-direction: row;
-    background-color: var(--cor-cinza-um);
+    max-width: 1200px;
     align-items: center;
-    justify-content: space-between;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    padding: 0px 1%;
+    margin: 0 auto;
+    justify-content: center;
 }
 
-.enchimento{
-    width: 50px;
+header nav ul{
+    display: flex;
 }
 
-/*----------------Media Rule----------------*/
+header nav a{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+    user-select: none;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    display: block;
+    padding: 23px 16px;
+}
 
-@media screen and (max-width: 400px){
-    header{
-        flex-direction: column-reverse;
-        position: static;
+header nav a.ativo{
+    pointer-events: none;
+    color: #ccc;
+}
+
+header nav a:before{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: calc(100% - 26px);
+    height: 2px;
+    bottom: 15px;
+    left: 13px;
+    background-color: #fff;
+    transform-origin: bottom right;
+    pointer-events: none;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-out;
+    -webkit-transition: transform 0.2s ease-out;
+    -moz-transition: transform 0.2s ease-out;
+    -ms-transition: transform 0.2s ease-out;
+    -o-transition: transform 0.2s ease-out;
+}
+
+header nav a:hover::before, header nav a:focus::before{
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/*__________Menu_Icone_Mobile__________*/
+
+.menu_icone{
+    -webkit-tap-highlight-color: transparent;
+    justify-self: center;
+    margin-left: auto;
+    margin-right: 20px;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 25;
+}
+
+.menu_icone .icone_menu{
+    height: 2px;
+    width: 18px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 20px;
+    transition: background-color 200ms linear, transform 300ms linear;
+    -webkit-transition: background-color 200ms linear, transform 300ms linear;
+    -moz-transition: background-color 200ms linear, transform 300ms linear;
+    -ms-transition: background-color 200ms linear, transform 300ms linear;
+    -o-transition: background-color 200ms linear, transform 300ms linear;
+}
+
+.menu_icone .icone_menu:nth-child(1){
+    transform: translateY(-6px);
+}
+
+.menu_icone .icone_menu:nth-child(3){
+    transform: translateY(6px);
+}
+
+header.ativo .menu_icone .icone_menu:nth-child(1){
+    transform: translateY(0px) rotate(45deg);
+    transition-delay: 75ms;
+    -webkit-transition-delay: 75ms;
+    -moz-transition-delay: 75ms;
+    -ms-transition-delay: 75ms;
+    -o-transition-delay: 75ms;
+}
+
+header.ativo .menu_icone .icone_menu:nth-child(2){
+    transform: translateX(60px);
+}
+
+header.ativo .menu_icone .icone_menu:nth-child(3){
+    transform: translateY(0px) rotate(315deg);
+    transition-delay: 150ms;
+    -webkit-transition-delay: 150ms;
+    -moz-transition-delay: 150ms;
+    -ms-transition-delay: 150ms;
+    -o-transition-delay: 150ms;
+}
+
+/*__________Media Queries__________*/
+
+@media only screen and (max-width: 700px) {
+
+    header nav{
+        height: 60px;
+    }
+
+    header nav ul{
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+        z-index: 21;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        max-width: 300px;
+        top: 0;
+        right: -101%;
+        flex-direction: column;
+        padding: 80px 10px 0px 10px;
+        background-color: #1247f1;
+        border-left: 2px solid #fff;
+        transition: right 300ms ease-out;
+        -webkit-transition: right 300ms ease-out;
+        -moz-transition: right 300ms ease-out;
+        -ms-transition: right 300ms ease-out;
+        -o-transition: right 300ms ease-out;
+    }
+
+    header.ativo nav ul{
+        right: 0;
+    }
+
+    header nav ul li{
+        width: 100%;
+    }
+
+    header nav ul li a{
+        text-align: center;
+        padding: 30px 0px;
+        width: 100%;
+    }
+
+    header nav ul li a:before{
+        content: none;
+    }
+
+    .menu_icone{
+        display: flex;
     }
 }
