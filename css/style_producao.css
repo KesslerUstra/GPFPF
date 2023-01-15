@@ -182,21 +182,23 @@
 .lista_pr > div{
     margin-bottom: 40px;
     gap: 20px;
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .lista_pr p{
     text-align: justify;
     font-weight: 600;
     line-height: 1.4rem;
-    color: #555;
-    font-size: 1.1rem;
+    color: #333;
+    font-size: 1rem;
 }
 
 .lista_pr a{
     display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: #0355d8;
     font-size: 1.1rem;
     width: 50px;
@@ -206,7 +208,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: fit-content;
     width: 30px;
     height: 30px;
 }

@@ -11,15 +11,21 @@
     <link rel="stylesheet" href="css/bug_animacao.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/style_eventos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <!--JS-->
     <script defer src="js/bug_animacao.js"></script>
     <script defer src="js/script_header.js"></script>
     <script defer src="js/script_eventos.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.1/lottie.min.js"></script>
 </head>
 <body class="preload">
     <header>
         <nav>
+            <span class="btn_eventos">
+                <span></span>
+                <span></span>
+            </span>
             <div class="menu_icone">
                 <div class="icone_menu"></div>
                 <div class="icone_menu"></div>
@@ -34,10 +40,60 @@
             </ul>
         </nav>
     </header>
-    <div class="conteudo">
-        <div id="anima_eventos">
-        </div>
-        <h3>Nenhum Evento Listado</h3>
+    <div class="titulo">
+        <div id="anima_evento"></div>
     </div>
+    <section class="evento">
+        <div class="opcoes">
+            <h4 style='--i:0.3s'>Tipo de Evento</h4>
+            <span style='--i:0.4s' data-pointer="pesquisa" class="link_evento">Pesquisa</span>
+            <span style='--i:0.5s' data-pointer="extensao" class="link_evento">Extensão</span>
+            <span style='--i:0.6s' data-pointer="seminarios" class="link_evento">Seminários</span>
+        </div>
+        <div class="linha"></div>
+        <div class="eventos">
+            <h5><span>Obs.:</span> Eventos recentes; eventos anteriores podem<br>ser consultados nos currículos dos integrantes.</h5>
+            <div class="sub_titulo">
+                <img src="assets/img/pesquisa.png" alt="Imagem Pesquisa">
+                <h3 id="pesquisa">Pesquisa</h3>
+            </div>
+            <div class="lista_ev">
+                <div class="item">
+                    <h5 class="titulo_evento">Desenvolvimento profissional a partir do enfrentamento de problemas na formação continuada de professores de Física</h5>
+                    <span class="tempo">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>27/11/2018 a 07/02/2025</span>
+                    </span>
+                    <span class="descricao">Descrição <i class="fa-solid fa-caret-up"></i></span>
+                    <p>
+                        A proposição deste projeto está fundamentada na compreensão da formação continuada num viés mais amplo para a resolução de problemas, ou, de modo mais específico, para o processo de enfrentamento de problemas da prática profissional docente. Os objetivos deste projeto são: Investigar o enfrentamento de problemas conceituais por professores de ciências e física; analisar o enfrentamento de problemas do contexto mais abrangente do exercício docente; sistematizar produções e experiências relativas à temática. Os resultados permitirão constituir indicativos da efetiva participação dos professores na construção de seu conhecimento profissional. Outro resultado esperado é a criação de um espaço para a continuidade das atividades de formação continuada. Estes resultados estão relacionados tanto ao currículo quanto ao contexto mais amplo do sistema escolar/educacional e aportarão contribuições significativas ao desenvolvimento profissional e à ampliação da autonomia docente, principalmente através da valorização dos conhecimentos dos professores. Fomento: Chamada FAPEMIG 01/2018 - Registro do projeto APQ-02208-18.
+                    </p>
+                </div>
+                <div class="item">
+                    <h5 class="titulo_evento">Apoio à prática pedagógica do professor de Ciências/Física</h5>
+                    <span class="tempo">
+                        <i class="fa-regular fa-clock"></i>
+                        <span>02/2021 a 02/2025</span>
+                    </span>
+                    <span class="descricao">Descrição <i class="fa-solid fa-caret-up"></i></span>
+                    <p>
+                        O objetivo geral consiste em compreender a natureza, as potencialidades e as implicações do apoio à prática pedagógica, do professor de Ciências e especificamente de Física, proporcionado por recursos didáticos, ênfases metodológicas e tecnologias da informação e comunicação.
+                    </p>
+                </div>
+            </div>
+            <div class="sub_titulo">
+                <img src="assets/img/extensao.png" alt="Imagem Exyensão">
+                <h3 id="extensao">Extensão</h3>
+            </div>
+            <div class="lista_ev">
+            </div>
+            <div class="sub_titulo">
+                <img src="assets/img/seminario.png" alt="Imagem Seminário">
+                <h3 id="seminarios">Seminários</h3>
+            </div>
+            <div class="lista_ev">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
