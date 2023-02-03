@@ -102,7 +102,7 @@ div.swiper-button-prev, div.swiper-button-next{
 .card{
     user-select: none;
     border-radius: 20px;
-    display: flex;
+    display: flex !important;
     align-items: center;
     flex-direction: column;
     width: 280px;

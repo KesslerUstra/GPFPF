@@ -4,8 +4,6 @@ var swiper = new Swiper(".mySwiper", {
     slidesPerView: 1,
     spaceBetween: 30,
     slidesPerGroup:1,
-    loop: true,
-    loopFillGroupWithBlank: true,
     pagination: {
       el: ".swiper_pag",
       clickable: true,
@@ -35,8 +33,6 @@ var swiper_02 = new Swiper(".mySwiper2", {
   slidesPerView: 1,
   spaceBetween: 30,
   slidesPerGroup:1,
-  loop: true,
-  loopFillGroupWithBlank: true,
   pagination: {
     el: ".swiper2_pag",
     clickable: true,
